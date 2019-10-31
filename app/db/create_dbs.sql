@@ -1,0 +1,6 @@
+USE master;
+GO
+CREATE DATABASE dev;
+GO
+CREATE DATABASE test;
+GO
