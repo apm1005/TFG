@@ -22,6 +22,10 @@ We will use pip to install Django:
 ```
 pip install django==2.2.6
 ```
+Using SQL Server also requires the [ODBC Driver](https://www.microsoft.com/en-us/download/details.aspx?id=56567) and the mssql backend:
+```
+pip install django-mssql-backend
+```
 
 ## TOOLS
 
