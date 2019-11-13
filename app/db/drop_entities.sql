@@ -1,1 +1,1 @@
-DROP TABLE IF EXISTS "Session", Item, APP, "Event", Enviroment, EventType, "User", ItemType;
+DROP TABLE IF EXISTS PersonItems, Passage, Item, App, "Event", Enviroment, EventType, Person, ItemType;

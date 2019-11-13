@@ -3,7 +3,7 @@ CREATE TABLE Enviroment (
 	ip_address VARCHAR(17),
 );
 
-CREATE TABLE APP (
+CREATE TABLE App (
 	id INTEGER PRIMARY KEY,
 	"name" VARCHAR(50),
 	"description" VARCHAR(100),
@@ -15,7 +15,7 @@ CREATE TABLE EventType (
 	"description" VARCHAR(70),
 );
 
-CREATE TABLE "User" (
+CREATE TABLE Person (
 	id INTEGER PRIMARY KEY,
 	name VARCHAR(50),
 	login VARCHAR(20),
@@ -29,7 +29,6 @@ CREATE TABLE ItemType (
 
 CREATE TABLE Item (
 	id INTEGER PRIMARY KEY,
-	"user_id" INTEGER FOREIGN KEY REFERENCES "User", --NOT NULL
 	item_type VARCHAR(30) FOREIGN KEY REFERENCES ItemType,
 	ip_address VARCHAR(17),
 	mac_address VARCHAR(12),
@@ -41,12 +40,18 @@ CREATE TABLE "Event" (
 	event_type VARCHAR(30) FOREIGN KEY REFERENCES EventType,
 );
 
-CREATE TABLE "Session" (
+CREATE TABLE Passage (
 	id INTEGER PRIMARY KEY,
 	event_id INTEGER FOREIGN KEY REFERENCES "Event",
-	app_id INTEGER FOREIGN KEY REFERENCES APP,
-	"user_id" INTEGER FOREIGN KEY REFERENCES "User",
+	app_id INTEGER FOREIGN KEY REFERENCES App,
+	person_id INTEGER FOREIGN KEY REFERENCES Person,
 	item_id INTEGER FOREIGN KEY REFERENCES Item,
 	start_time DATETIME NOT NULL,
 	end_time DATETIME,
+);
+
+CREATE TABLE PersonItems (
+	person_id INTEGER FOREIGN KEY REFERENCES Person,
+	item_id INTEGER FOREIGN KEY REFERENCES Item,
+	PRIMARY KEY (person_id, item_id)
 );
