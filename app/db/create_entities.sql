@@ -1,4 +1,4 @@
-CREATE TABLE Enviroment (
+CREATE TABLE Environment (
 	"server" VARCHAR(40) PRIMARY KEY,
 	ip_address VARCHAR(17),
 );
@@ -7,7 +7,7 @@ CREATE TABLE App (
 	id INTEGER PRIMARY KEY,
 	"name" VARCHAR(50),
 	"description" VARCHAR(100),
-	"server" VARCHAR(40) FOREIGN KEY REFERENCES Enviroment,
+	"server" VARCHAR(40) FOREIGN KEY REFERENCES Environment,
 );
 
 CREATE TABLE EventType (
