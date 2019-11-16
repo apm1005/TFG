@@ -22,10 +22,32 @@ Using SQL Server also requires the [ODBC Driver](https://www.microsoft.com/en-us
 We can get this version of Python from [here](https://www.python.org/downloads/).
 
 ### pip
-We will use pip to install all the specified packages in requirements.txt:
-```
+Whether we use or not virtualenv (shown in the section below), all the requirements needed are located in requirements.txt and we can easily 
+install them with:
+```cmd
 pip install -r requirements.txt
 ```
+
+### virtualenv (optional)
+Once we have Python installed, pip will be installed too.
+We can use pip to install virtualenv, a tool used to create virtual environments:
+```
+pip install virtualenv==16.7.7
+```
+
+It can be activated with:
+```cmd
+~\venv\Scripts\activate.bat
+```
+Deactivated with:
+```cmd
+~\venv\Scripts\deactivate.bat
+```
+And check what contains with:
+```cmd
+pip freeze
+```
+This app its being developed in Windows and that causes virtualenv to create different directories than in Linux.
 
 ## TOOLS
 
