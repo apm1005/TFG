@@ -75,8 +75,18 @@ WSGI_APPLICATION = 'tfgproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'dev',
+        'HOST': '127.0.0.1',
+        'PORT': 1434,
+        'UID': 'tfg',
+        'PWD': '1234',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            # 'isolation_level'
+            # 'dns'
+            # ...
+        }
     }
 }
 
