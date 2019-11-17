@@ -39,6 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # own
+    'applications',
+    'environments',
+    'events',
+    'eventtypes',
+    'items',
+    'itemtypes',
+    'passages',
+    'personitems',
     'persons',
 ]
 
