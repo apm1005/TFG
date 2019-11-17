@@ -5,7 +5,8 @@ class VPNParser:
     """
     Class that reads logs of the VPN and stores it in the database.
     """
-    def __get_users(self):
+
+    def __get_users(self):  # TODO
         """
         Gets the users from the database.
 
@@ -16,7 +17,7 @@ class VPNParser:
         """
         pass
 
-    def __load_data(self):
+    def __load_data(self):  # TODO
         """
         Loads the last login of each person in memory.
 
@@ -27,13 +28,13 @@ class VPNParser:
         """
         pass
 
-    def __store_data(self):
+    def __store_data(self):  # TODO
         """
         Stores the data into the Event entity and Passage entity.
         """
         pass
 
-    def parse(self):
+    def parse(self):  # TODO
         """
         Parses the events of the VPN and stores them in the database.
         """
