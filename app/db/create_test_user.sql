@@ -1,24 +1,4 @@
-CREATE LOGIN tfg WITH PASSWORD = '1234';
-GO
-
-USE [dev];
-GO
-
-CREATE USER tfg FOR LOGIN tfg;
-GO
-
-EXEC sp_addrolemember 'db_datareader', 'tfg'
-EXEC sp_addrolemember 'db_datawriter', 'tfg'
-EXEC sp_addrolemember 'db_ddladmin', 'tfg'
-GO
-
-USE [test]
-GO
-
-CREATE USER tfg FOR LOGIN tfg;
-GO
-
-EXEC sp_addrolemember 'db_datareader', 'tfg'
-EXEC sp_addrolemember 'db_datawriter', 'tfg'
-EXEC sp_addrolemember 'db_ddladmin', 'tfg'
-GO
+CREATE USER 'tfg' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON dev TO 'tfg';
+GRANT ALL PRIVILEGES ON test TO 'tfg';
+FLUSH PRIVILEGES;

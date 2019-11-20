@@ -1,17 +1,1 @@
-DROP LOGIN tfg;
-GO
-
-USE [dev];
-GO
-
-DROP USER IF EXISTS tfg;
-GO
-
-
-USE [test];
-GO
-
-DROP USER IF EXISTS tfg;
-GO
-
-
+DROP USER IF EXISTS 'tfg';
