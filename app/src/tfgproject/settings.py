@@ -86,18 +86,12 @@ WSGI_APPLICATION = 'tfgproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dev',
+        'USER': 'tfg',
+        'PASSWORD': '1234',
         'HOST': '127.0.0.1',
-        'PORT': 1434,
-        'UID': 'tfg',
-        'PWD': '1234',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-            # 'isolation_level'
-            # 'dns'
-            # ...
-        }
+        'PORT': 3306,
     }
 }
 
