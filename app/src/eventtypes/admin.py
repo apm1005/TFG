@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Eventtype
 
-# Register your models here.
+
+admin.site.register(Eventtype)
