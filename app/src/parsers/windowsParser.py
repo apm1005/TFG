@@ -1,6 +1,16 @@
 import os
 import numpy as np
+import locale
 from persons.models import Person
+
+
+class LanguageNotSupported(Exception):
+    """
+    Raised when the language of Windows is not Spanish or English
+    """
+
+    def __init__(self, message):
+        self.message = message
 
 
 class WindowsParser:
@@ -31,12 +41,22 @@ class WindowsParser:
         users = self.__get_users()
         logons = np.empty((users.shape[0], 1), dtype=object)
         result = np.hstack((users, logons))
+        date_length = 22
+        language = locale.getdefaultlocale()[0]
+
+        if language == 'es_ES':
+            logon_string = 'Ultima'
+        elif language == 'en_US':
+            logon_string = 'Last logon'
+        else:
+            raise LanguageNotSupported('The current Windows language is not supported!')
 
         for i, user in enumerate(result):
-            command = f'net user {user[1]} | findstr /B /C:"Ultima sesión iniciada"'
-            r = str(os.popen(command).read())
-            if r != '':
-                result[i, 2] = r[-22:].replace('?', '').replace('\n', '')
+            user_id, user_login, _ = user
+            command = f'net user {user_login} | findstr /B /C:"{logon_string}"'
+            timestamp_logon = str(os.popen(command).read())
+            if timestamp_logon != '':
+                result[i, 2] = timestamp_logon[-date_length:].replace('?', '').replace('\n', '')
 
         return result
 
