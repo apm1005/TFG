@@ -1,7 +1,13 @@
 import os
 import numpy as np
 import locale
+import datetime
 from persons.models import Person
+from eventtypes.models import Eventtype
+from events.models import Event
+from applications.models import App
+from items.models import Item
+from passages.models import Passage
 
 
 class LanguageNotSupported(Exception):
@@ -29,7 +35,7 @@ class WindowsParser:
         """
         return np.array(Person.objects.values_list('id', 'login'), dtype='object')
 
-    def __load_data(self):  # TODO
+    def __load_data(self):  # TODO - Add item id to result
         """
         Loads the last login of each person in memory.
 
@@ -56,18 +62,75 @@ class WindowsParser:
             command = f'net user {user_login} | findstr /B /C:"{logon_string}"'
             timestamp_logon = str(os.popen(command).read())
             if timestamp_logon != '':
-                result[i, 2] = timestamp_logon[-date_length:].replace('?', '').replace('\n', '')
+                parsed_timestamp = self.__parse_timestamp(
+                    timestamp_logon[-date_length:].replace('?', '').replace('\n', ''))
+                result[i, 2] = parsed_timestamp
 
         return result
 
-    def __store_data(self):  # TODO
+    def __parse_timestamp(self, timestamp):
+        """
+        Parses the timestamp given to a format that the ORM can manage
+
+        Parameters
+        ----------
+        timestamp : timestamp
+            user last logon timestamp
+
+        Returns
+        -------
+        timestamp
+            user last logon timestamp parsed
+        """
+        units = datetime.datetime.strptime(timestamp, '%d/%m/%Y %H:%M:%S')
+        return datetime.datetime.strftime(units, '%Y-%m-%d %H:%M:%S')
+
+    def __create_event(self, user_id, user_last_logon):
+        """
+        Creates an Event in the database
+
+        Parameters
+        ----------
+        user_id : int
+            user identifier
+        user_last_logon : timestamp
+            user last logon timestamp
+
+        Returns
+        -------
+        int
+            identifier for the event created
+        """
+        type_of_event = Eventtype.objects.get(type='log in')
+        event = Event.objects.create(instant=user_last_logon, event_type=type_of_event)
+        event.save()
+        return event.id
+
+    def __create_passage(self, user_id, user_last_logon, event_id):
+        """
+        Creates a Passage in the database
+        """
+        app_id = App.objects.get(name='Windows').id
+        event_id = Event.objects.get(id=event_id).id
+        # item_id  # TODO
+        person_id = Person.objects.get(id=user_id).id
+        Passage.objects.create(start_time=user_last_logon, end_time=None, app_id=app_id,
+                               event_id=event_id, item_id=None, person_id=person_id)
+
+    def __store_data(self):  # TODO - Add item id to passage
         """
         Stores the data into the Event entity and Passage entity.
         """
-        pass
+        users = self.__load_data()
 
-    def parse(self):  # TODO
+        for i, user in enumerate(users):
+            user_id, user_login, user_last_logon = user
+            if user_last_logon is not None:
+                event_id = self.__create_event(user_id=user_id, user_last_logon=user_last_logon)
+                self.__create_passage(user_id=user_id, user_last_logon=user_last_logon, event_id=event_id)
+
+    def parse(self):
         """
         Parses the login of each person from Windows and stores it in the database.
         """
-        return self.__load_data()
+        self.__store_data()
