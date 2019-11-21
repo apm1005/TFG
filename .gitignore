@@ -2,3 +2,4 @@ seguimiento.xlsx
 notas.txt
 .idea
 *\__pycache__
+/app/src/tfgproject/mysqlconfig.py

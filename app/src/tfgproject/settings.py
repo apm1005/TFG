@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from .mysqlconfig import DB
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -87,11 +88,11 @@ WSGI_APPLICATION = 'tfgproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dev',
-        'USER': 'tfg',
-        'PASSWORD': '1234',
-        'HOST': '127.0.0.1',
-        'PORT': 3306,
+        'NAME': DB['NAME'],
+        'USER': DB['USER'],
+        'PASSWORD': DB['PASSWORD'],
+        'HOST': DB['HOST'],
+        'PORT': DB['PORT'],
     }
 }
 
