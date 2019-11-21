@@ -36,7 +36,7 @@ class WindowsParser:
         Returns
         -------
         ndarray
-            an array with the event, app (Windows OS), person id, item id and timestamps
+            an array with the person id, user login and timestamps
         """
         users = self.__get_users()
         logons = np.empty((users.shape[0], 1), dtype=object)
