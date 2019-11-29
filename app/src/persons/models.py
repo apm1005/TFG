@@ -8,3 +8,8 @@ class Person(models.Model):
 
     def __str__(self):
         return str(self.login) + ' - ' + str(self.name)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['login'], name='unique user login')
+        ]
