@@ -1,4 +1,4 @@
-import numpy as np
+from persons.models import Person
 
 
 class VPNParser:
@@ -6,27 +6,34 @@ class VPNParser:
     Class that reads logs of the VPN and stores it in the database.
     """
 
-    def __get_users(self):  # TODO
+    @staticmethod
+    def __get_user(user_login):
         """
-        Gets the users from the database.
+        Gets the user from the database.
 
         Returns
         -------
-        list
-            a list with the login of each person
+        int
+            an int that identifies a person
         """
-        pass
+        identifier = None
+        try:
+            identifier = Person.objects.get(login=user_login).id
+        except DoesNotExist:
+            print(f'User not found for login {user_login}!')
+        finally:
+            return identifier
 
-    def __load_data(self):  # TODO
+    @staticmethod
+    def load_data():  # TODO
         """
-        Loads the last login of each person in memory.
+        Loads the VPN XML log in memory.
 
         Returns
         -------
         ndarray
             an array with the event, app (Windows OS), person id, item id and timestamps
         """
-        pass
 
     def __store_data(self):  # TODO
         """
