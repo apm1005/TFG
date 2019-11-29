@@ -1,3 +1,5 @@
+import xml.etree.ElementTree as et
+from os import listdir, chdir
 from persons.models import Person
 
 
@@ -25,7 +27,19 @@ class VPNParser:
             return identifier
 
     @staticmethod
-    def load_data():  # TODO
+    def __check_directory():
+        """
+        Checks if there are VPN XML files to parse and returns a list with the names
+
+        Returns
+        -------
+        list
+            a list with all the names of the XML files
+        """
+        return listdir('..\\log_examples\\vpn_logs')
+
+    @staticmethod
+    def __load_data(filename):  # TODO
         """
         Loads the VPN XML log in memory.
 
@@ -34,6 +48,10 @@ class VPNParser:
         ndarray
             an array with the event, app (Windows OS), person id, item id and timestamps
         """
+        # files = self.__check_directory()
+        # content = et.parse(f'../../log_examples/vpn_logs/{filename}')
+        # print(content)
+        pass
 
     def __store_data(self):  # TODO
         """
