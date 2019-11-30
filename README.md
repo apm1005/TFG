@@ -6,7 +6,7 @@ Notice that all SQL scripts are <span style="color:#CB2400">only</span> warranti
 
 ## REQUIREMENTS FOR DEVELOPER
 * MySQL 5.7.28
-* MySQL Workbench
+* MySQL Workbench (Optional)
 * Python 3.7.5
 * Django 2.2.6
 
@@ -16,20 +16,29 @@ To install MySQL we only need to download from [here](https://dev.mysql.com/down
 
 Also, another useful tool is MySQL Workbench and can be downloaded from [here](https://dev.mysql.com/downloads/workbench/).
 
+### DB Scripts
+Next step is to create our database and user for the project, you can use:
+```cmd
+~\app\db\create_dbs.sql
+~\app\db\create_test_user.sql
+```
+
 ### Python 3.7.5
-We can get this version of Python from [here](https://www.python.org/downloads/).
+We can get this version of Python from [here](https://www.python.org/downloads/release/python-375/).
+
+Make sure Python 3.7.5 is the version installed, this is important for the requirements.
 
 ### pip
 Whether we use or not virtualenv (shown in the section below), all the requirements needed are located in requirements.txt and we can easily 
 install them with:
 ```cmd
-pip install -r requirements.txt
+pip install -r ~\requirements.txt
 ```
 
 ### virtualenv (recommended)
 Once we have Python installed, pip will be installed too.
 We can use pip to install virtualenv, a tool used to create virtual environments:
-```
+```cmd
 pip install virtualenv==16.7.7
 ```
 
@@ -46,6 +55,15 @@ And check what contains with:
 pip freeze
 ```
 This app its being developed in Windows and that causes virtualenv to create different directories than in Linux.
+
+### Migrations
+Now that all is installed, we will execute the following command to create the database entities:
+```cmd
+cd ~\app\src
+manage.py migrate
+```
+For the last step, you can use the ```~\app\db\create_test_user.sql``` script as an example of initial data.
+
 
 ## TOOLS
 
