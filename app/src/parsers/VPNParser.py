@@ -38,8 +38,7 @@ class VPNParser:
         """
         return listdir('..\\log_examples\\vpn_logs')
 
-    @staticmethod
-    def __load_data(filename):  # TODO
+    def load_data(self):  # TODO - Finish
         """
         Loads the VPN XML log in memory.
 
@@ -48,10 +47,17 @@ class VPNParser:
         ndarray
             an array with the event, app (Windows OS), person id, item id and timestamps
         """
-        # files = self.__check_directory()
-        # content = et.parse(f'../../log_examples/vpn_logs/{filename}')
-        # print(content)
-        pass
+        files = self.__check_directory()
+        roots = [et.parse(f'../log_examples/vpn_logs/{file}').getroot() for file in files]
+
+        for root in roots[0]:
+            for summary in root.findall('Summary'):
+                print(summary.findtext('Hora')) # Timestamp
+                print(summary.findtext('IPdeliniciador')) # IP
+                print(summary.findtext('Usuario')) # Person
+                print(summary.findtext('Duración')) # Time
+                print(summary.findtext('Servicio')) # App
+                print(summary.findtext('Mensaje')) # EventType
 
     def __store_data(self):  # TODO
         """
