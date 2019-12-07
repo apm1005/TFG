@@ -1,6 +1,12 @@
 import xml.etree.ElementTree as et
+import datetime
 from os import listdir, chdir
 from persons.models import Person
+from eventtypes.models import Eventtype
+from events.models import Event
+from applications.models import App
+from passages.models import Passage
+from items.models import Item
 
 
 class VPNParser:
@@ -38,7 +44,92 @@ class VPNParser:
         """
         return listdir('..\\log_examples\\vpn_logs')
 
-    def load_data(self):  # TODO - Finish
+    @staticmethod
+    def __create_event(instant, event_type):
+        """
+        Only have been considered logged out events, cannot match login with log outs
+        """
+        identifier = None
+        try:
+            type_of_event = Eventtype.objects.get(type=event_type)
+            event = Event.objects.create(instant=instant, event_type=type_of_event)
+            event.save()
+            identifier = event.id
+        except DoesNotExist:
+            print(f'Type of event not found {event_type}!')
+        finally:
+            return identifier
+
+    @staticmethod
+    def __parse_timestamp(timestamp):
+        units = datetime.datetime.strptime(timestamp, '%d-%b-%Y %H:%M:%S')
+        return datetime.datetime.strftime(units, '%Y-%m-%d %H:%M:%S')
+
+    @staticmethod
+    def __parse_event_type(event_message):
+        event_type = None
+        if 'login' in event_message:
+            event_type = 'log in'
+        elif 'logged out' in event_message:
+            event_type = 'log out'
+        return event_type
+
+    @staticmethod
+    def __set_start_time(instant, duration):  # TODO - Use method
+        start_time = None
+        if duration != 'N/A':
+            units_instant = datetime.datetime.strptime(instant, '%Y-%m-%d %H:%M:%S')
+            instant_time = datetime.timedelta(hours=units_instant.hour,
+                                              minutes=units_instant.minute,
+                                              seconds=units_instant.second)
+            units_duration = datetime.datetime.strptime(duration, '%H:%M:%S')
+            duration_time = datetime.timedelta(hours=units_duration.hour,
+                                               minutes=units_duration.minute,
+                                               seconds=units_duration.second)
+            new_time = instant_time - duration_time
+            units_new_time = datetime.datetime.strptime(str(new_time), '%H:%M:%S')
+            start_time = datetime.datetime.strftime(
+                datetime.datetime(year=units_instant.year,
+                                  month=units_instant.month,
+                                  day=units_instant.day,
+                                  hour=units_new_time.hour,
+                                  minute=units_new_time.minute,
+                                  second=units_new_time.second), '%Y-%m-%d %H:%M:%S')
+        return start_time
+
+    @staticmethod
+    def __get_item(ip_address):
+        identifier = None
+        try:
+            identifier = Item.objects.get(ip_address=ip_address).id
+        except DoesNotExist:
+            print(f'IP not found {ip_address}!')
+        finally:
+            return identifier
+
+    @staticmethod
+    def __get_app(app):
+        identifier = None
+        try:
+            identifier = App.objects.get(name=app).id
+        except DoesNotExist:
+            print(f'App {app} not found!')
+        finally:
+            return identifier
+
+    @staticmethod
+    def __create_passage(instant, end_time, app_id, event_id, item_id, user_id):
+        """
+        Creates a Passage in the database
+        """
+        Passage.objects.create(start_time=instant,
+                               end_time=end_time,
+                               app_id=app_id,
+                               event_id=event_id,
+                               item_id=item_id,
+                               person_id=user_id)
+
+    def __create_objects(self, summary):
         """
         Loads the VPN XML log in memory.
 
@@ -47,26 +138,40 @@ class VPNParser:
         ndarray
             an array with the event, app (Windows OS), person id, item id and timestamps
         """
-        files = self.__check_directory()
-        roots = [et.parse(f'../log_examples/vpn_logs/{file}').getroot() for file in files]
+        event_type = self.__parse_event_type(summary.findtext('Mensaje'))
+        instant = self.__parse_timestamp(summary.findtext('Hora'))
+        start_time = self.__set_start_time(instant, summary.findtext('Duración'))
+        item_id = self.__get_item(summary.findtext('IPdeliniciador'))  # TODO - Update data for Adrian and IP
+        user_id = self.__get_user(summary.findtext('Usuario'))  # TODO - Cut string to save only login (\\..., @...)
+        app_id = self.__get_app('VPN')  # TODO - Add insert to initial data sql script
+        # summary.findtext('Servicio')) Service
 
-        for root in roots[0]:
-            for summary in root.findall('Summary'):
-                print(summary.findtext('Hora')) # Timestamp
-                print(summary.findtext('IPdeliniciador')) # IP
-                print(summary.findtext('Usuario')) # Person
-                print(summary.findtext('Duración')) # Time
-                print(summary.findtext('Servicio')) # App
-                print(summary.findtext('Mensaje')) # EventType
+        end_time = None
+        if start_time is not None:
+            end_time = instant
+            instant = start_time
 
-    def __store_data(self):  # TODO
+        event_id = self.__create_event(instant=instant, event_type=event_type)
+        self.__create_passage(instant=instant,
+                              end_time=end_time,
+                              app_id=app_id,
+                              event_id=event_id,
+                              item_id=item_id,
+                              user_id=user_id)
+
+    def __store_data(self):
         """
         Stores the data into the Event entity and Passage entity.
         """
-        pass
+        files = self.__check_directory()
+        roots = [et.parse(f'../log_examples/vpn_logs/{file}').getroot() for file in files]
+        for root in roots:
+            for elements in root.iter():
+                for summary in elements.findall('Summary'):
+                    data = self.__create_objects(summary)
 
-    def parse(self):  # TODO
+    def parse(self):
         """
         Parses the events of the VPN and stores them in the database.
         """
-        pass
+        self.__store_data()
