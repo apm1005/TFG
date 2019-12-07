@@ -8,4 +8,4 @@ class Event(models.Model):
     event_type = models.ForeignKey(Eventtype, models.DO_NOTHING, db_column='event_type', blank=True, null=True)
 
     def __str__(self):
-        return str(self.instant) + ' - ' + str(self.event_type)  # TODO - Fix datetime format, instant shows 00:00?
+        return str(self.instant) + ' - ' + str(self.event_type)
