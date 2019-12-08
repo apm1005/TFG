@@ -90,7 +90,7 @@ class WindowsParser:
     @staticmethod
     def __parse_timestamp(timestamp):
         """
-        Parses the timestamp given to a format that the ORM can manage
+        Parses the timestamp given to a format that the ORM can store
 
         Parameters
         ----------

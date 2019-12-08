@@ -17,7 +17,12 @@ class VPNParser:
     @staticmethod
     def __get_user(user_login):
         """
-        Gets the user from the database.
+        Gets the user from the database
+
+        Parameters
+        ----------
+        user_login : str
+            person login
 
         Returns
         -------
@@ -52,7 +57,12 @@ class VPNParser:
     @staticmethod
     def __create_event(instant, event_type):
         """
-        Only have been considered logged out events, cannot match login with log outs
+        Creates an event for an instant and type of event specified
+
+        Returns
+        -------
+        int
+            an int that identifies an event
         """
         identifier = None
         try:
@@ -67,11 +77,37 @@ class VPNParser:
 
     @staticmethod
     def __parse_timestamp(timestamp):
+        """
+        Parses the timestamp given to a format that the ORM can store
+
+        Parameters
+        ----------
+        timestamp : timestamp
+            timestamp of event
+
+        Returns
+        -------
+        timestamp
+            timestamp of event
+        """
         units = datetime.datetime.strptime(timestamp, '%d-%b-%Y %H:%M:%S')
         return datetime.datetime.strftime(units, '%Y-%m-%d %H:%M:%S')
 
     @staticmethod
     def __parse_event_type(event_message):
+        """
+        Parses the type of event read in the XML file
+
+        Parameters
+        ----------
+        event_message : str
+            message with the type of event
+
+        Returns
+        -------
+        str
+            string with the event in a format that the ORM can store
+        """
         event_type = None
         if 'login' in event_message:
             event_type = 'log in'
@@ -80,7 +116,23 @@ class VPNParser:
         return event_type
 
     @staticmethod
-    def __set_start_time(instant, duration):  # TODO - Use method
+    def __set_start_time(instant, duration):
+        """
+        Reads the timestamp given and checks if it necessary to create another timestamp based
+        on the duration parameter
+
+        Parameters
+        ----------
+        instant : timestamp
+            timestamp of event
+        duration : str
+            string with the time of the VPN connection
+
+        Returns
+        -------
+        timestamp
+            new timestamp for the passage
+        """
         start_time = None
         if duration != 'N/A':
             units_instant = datetime.datetime.strptime(instant, '%Y-%m-%d %H:%M:%S')
@@ -104,6 +156,19 @@ class VPNParser:
 
     @staticmethod
     def __get_item(ip_address):
+        """
+        Gets the item from the database
+
+        Parameters
+        ----------
+        ip_address : str
+            ip address of the item used
+
+        Returns
+        -------
+        int
+            an int that identifies an item
+        """
         identifier = None
         try:
             identifier = Item.objects.get(ip_address=ip_address).id
@@ -114,6 +179,19 @@ class VPNParser:
 
     @staticmethod
     def __get_app(app):
+        """
+        Gets the app from the database
+
+        Parameters
+        ----------
+        app : str
+            app of the parser
+
+        Returns
+        -------
+        int
+            an int that identifies an app
+        """
         identifier = None
         try:
             identifier = App.objects.get(name=app).id
@@ -136,7 +214,12 @@ class VPNParser:
 
     def __create_objects(self, summary):
         """
-        Loads the VPN XML log in memory.
+        Creates the objects based on the summary given
+
+        Parameters
+        ----------
+        summary : xml.etree.ElementTree.Element
+            element of the XML file with the information of an event
         """
         event_type = self.__parse_event_type(summary.findtext('Mensaje'))
         instant = self.__parse_timestamp(summary.findtext('Hora'))
@@ -144,7 +227,6 @@ class VPNParser:
         item_id = self.__get_item(summary.findtext('IPdeliniciador'))
         user_id = self.__get_user(summary.findtext('Usuario'))
         app_id = self.__get_app('VPN')
-        # summary.findtext('Servicio')) Service
 
         end_time = None
         if start_time is not None:
@@ -162,14 +244,14 @@ class VPNParser:
 
     def __store_data(self):
         """
-        Stores the data into the Event entity and Passage entity.
+        Stores the data into the Event entity and Passage entity
         """
         files = self.__check_directory()
         roots = [et.parse(f'../log_examples/vpn_logs/{file}').getroot() for file in files]
         for root in roots:
             for elements in root.iter():
                 for summary in elements.findall('Summary'):
-                    data = self.__create_objects(summary)
+                    self.__create_objects(summary)
 
     def parse(self):
         """
