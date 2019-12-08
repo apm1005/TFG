@@ -3,7 +3,8 @@ USE dev; -- USE test;
 INSERT INTO `environments_environment` (server, ip_address) VALUES
 	('localhost', '127.0.0.1');
 INSERT INTO `applications_app` (name, description, server) VALUES
-	('Windows', 'Windows OS', 'localhost');
+	('VPN', 'Virtual Private Network', NULL),
+    ('Windows', 'Windows OS', 'localhost');
 INSERT INTO `eventtypes_eventtype` (type, description) VALUES 
 	('log in', 'go through the procedures to begin use of an app'),
     ('log out', 'go through the procedures to conclude use of an app');
