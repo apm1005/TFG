@@ -20,13 +20,13 @@ class LanguageNotSupported(Exception):
 
 class WindowsParser:
     """
-    Class that executes a command in Windows to extract the last login of the users.
+    Class that executes a command in Windows to extract the last login of the users
     """
 
     @staticmethod
     def __get_users():
         """
-        Gets the users from the database.
+        Gets the users from the database
 
         Returns
         -------
@@ -63,7 +63,7 @@ class WindowsParser:
 
     def __load_data(self):
         """
-        Loads the last login of each person in memory.
+        Loads the last login of each person in memory
 
         Returns
         -------
@@ -129,6 +129,15 @@ class WindowsParser:
     def __create_passage(user_id, user_last_logon, event_id):
         """
         Creates a Passage in the database
+
+        Parameters
+        ----------
+        user_id : int
+            user identifier
+        user_last_logon : timestamp
+            user last logon timestamp
+        event_id : int
+            event identifier
         """
         Passage.objects.create(start_time=user_last_logon,
                                end_time=None,
@@ -139,7 +148,7 @@ class WindowsParser:
 
     def __store_data(self):
         """
-        Stores the data into the Event entity and Passage entity.
+        Stores the data into the Event entity and Passage entity
         """
         users = self.__load_data()
 
@@ -151,6 +160,6 @@ class WindowsParser:
 
     def parse(self):
         """
-        Parses the login of each person from Windows and stores it in the database.
+        Parses the login of each person from Windows and stores it in the database
         """
         self.__store_data()

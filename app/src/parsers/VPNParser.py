@@ -59,6 +59,13 @@ class VPNParser:
         """
         Creates an event for an instant and type of event specified
 
+        Parameters
+        ----------
+        instant : timestamp
+            timestamp of the event
+        event_type : str
+            type of the event
+
         Returns
         -------
         int

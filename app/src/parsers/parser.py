@@ -4,8 +4,6 @@ from .windowsParser import WindowsParser
 
 class Parser:
     """
-    Facade pattern.
-
     Class that analyzes content from the logs of each app and provides data for the database.
     """
 
