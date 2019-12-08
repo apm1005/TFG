@@ -24,6 +24,11 @@ class VPNParser:
         int
             an int that identifies a person
         """
+        if '@' in user_login:
+            user_login = str(user_login).split('@')[0]
+        elif '\\\\' in user_login:
+            user_login = str(user_login).split('\\\\')[1]
+
         identifier = None
         try:
             identifier = Person.objects.get(login=user_login).id
@@ -132,24 +137,20 @@ class VPNParser:
     def __create_objects(self, summary):
         """
         Loads the VPN XML log in memory.
-
-        Returns
-        -------
-        ndarray
-            an array with the event, app (Windows OS), person id, item id and timestamps
         """
         event_type = self.__parse_event_type(summary.findtext('Mensaje'))
         instant = self.__parse_timestamp(summary.findtext('Hora'))
         start_time = self.__set_start_time(instant, summary.findtext('Duración'))
-        item_id = self.__get_item(summary.findtext('IPdeliniciador'))  # TODO - Update data for Adrian and IP
-        user_id = self.__get_user(summary.findtext('Usuario'))  # TODO - Cut string to save only login (\\..., @...)
-        app_id = self.__get_app('VPN')  # TODO - Add insert to initial data sql script
+        item_id = self.__get_item(summary.findtext('IPdeliniciador'))
+        user_id = self.__get_user(summary.findtext('Usuario'))
+        app_id = self.__get_app('VPN')
         # summary.findtext('Servicio')) Service
 
         end_time = None
         if start_time is not None:
             end_time = instant
             instant = start_time
+            event_type = 'log in'
 
         event_id = self.__create_event(instant=instant, event_type=event_type)
         self.__create_passage(instant=instant,
