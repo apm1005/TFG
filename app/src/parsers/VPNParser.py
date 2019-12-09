@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as et
 import datetime
-from os import listdir, chdir
+import locale
+from os import listdir
 from persons.models import Person
 from eventtypes.models import Eventtype
 from events.models import Event
@@ -97,6 +98,7 @@ class VPNParser:
         timestamp
             timestamp of event
         """
+
         units = datetime.datetime.strptime(timestamp, '%d-%b-%Y %H:%M:%S')
         return datetime.datetime.strftime(units, '%Y-%m-%d %H:%M:%S')
 
@@ -253,12 +255,17 @@ class VPNParser:
         """
         Stores the data into the Event entity and Passage entity
         """
+        current = locale.getlocale()
+        locale.setlocale(locale.LC_ALL, ('es_US', 'UTF-8'))
+
         files = self.__check_directory()
         roots = [et.parse(f'../log_examples/vpn_logs/{file}').getroot() for file in files]
         for root in roots:
             for elements in root.iter():
                 for summary in elements.findall('Summary'):
                     self.__create_objects(summary)
+
+        locale.setlocale(locale.LC_ALL, current)
 
     def parse(self):
         """
