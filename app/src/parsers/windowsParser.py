@@ -126,7 +126,7 @@ class WindowsParser:
         return event.id
 
     @staticmethod
-    def __create_passage(user_id, user_last_logon, event_id):  # TODO Change object creation
+    def __create_passage(user_id, user_last_logon, event_id):
         """
         Creates a Passage in the database
 
@@ -142,9 +142,9 @@ class WindowsParser:
         Passage.objects.create(start_time=user_last_logon,
                                end_time=None,
                                app_id=App.objects.get(name='Windows').id,
-                               event_id=Event.objects.get(id=event_id).id,
+                               event_id=event_id,
                                item_id=None,
-                               person_id=Person.objects.get(id=user_id).id)
+                               person_id=user_id)
 
     @staticmethod
     def __check_if_exists(user_id, user_last_logon):
