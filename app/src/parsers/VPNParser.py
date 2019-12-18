@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as et
 import datetime
 import locale
-from os import listdir
+import os
 from persons.models import Person
 from eventtypes.models import Eventtype
 from events.models import Event
@@ -53,7 +53,7 @@ class VPNParser:
         list
             a list with all the names of the XML files
         """
-        return listdir('..\\log_examples\\vpn_logs')
+        return os.listdir('..\\log_examples\\vpn_logs')
 
     @staticmethod
     def __create_event(instant, event_type):
@@ -251,6 +251,19 @@ class VPNParser:
                               item_id=item_id,
                               user_id=user_id)
 
+    @staticmethod
+    def __delete_files(files):
+        """
+        Deletes from the "to do" directory the files parsed
+
+        Parameters
+        ----------
+        files : list
+            all the files that have been parsed
+        """
+        for file in files:
+            os.remove(os.path.join('..\\log_examples\\vpn_logs', file))
+
     def __store_data(self):
         """
         Stores the data into the Event entity and Passage entity
@@ -264,6 +277,7 @@ class VPNParser:
             for elements in root.iter():
                 for summary in elements.findall('Summary'):
                     self.__create_objects(summary)
+        self.__delete_files(files)
 
         locale.setlocale(locale.LC_ALL, current)
 
