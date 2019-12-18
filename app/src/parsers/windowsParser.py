@@ -126,7 +126,7 @@ class WindowsParser:
         return event.id
 
     @staticmethod
-    def __create_passage(user_id, user_last_logon, event_id):
+    def __create_passage(user_id, user_last_logon, event_id):  # TODO Change object creation
         """
         Creates a Passage in the database
 
@@ -146,6 +146,19 @@ class WindowsParser:
                                item_id=None,
                                person_id=Person.objects.get(id=user_id).id)
 
+    @staticmethod
+    def __check_if_exists(user_id, user_last_logon):
+        exists = None
+        try:
+            Passage.objects.get(person_id=user_id,
+                                start_time=user_last_logon,
+                                app_id=App.objects.get(name='Windows').id)
+            exists = True
+        except DoesNotExist:
+            exists = False
+        finally:
+            return exists
+
     def __store_data(self):
         """
         Stores the data into the Event entity and Passage entity
@@ -154,7 +167,8 @@ class WindowsParser:
 
         for i, user in enumerate(users):
             user_id, user_login, user_last_logon = user
-            if user_last_logon is not None:
+            if user_last_logon is not None and not self.__check_if_exists(user_id=user_id,
+                                                                          user_last_logon=user_last_logon):
                 event_id = self.__create_event(user_last_logon=user_last_logon)
                 self.__create_passage(user_id=user_id, user_last_logon=user_last_logon, event_id=event_id)
 
