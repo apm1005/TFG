@@ -148,6 +148,22 @@ class WindowsParser:
 
     @staticmethod
     def __check_if_exists(user_id, user_last_logon):
+        """
+        Checks if a logon is already in the database
+
+        Parameters
+        ----------
+        user_id : int
+            user identifier
+        user_last_logon : timestamp
+            user last logon timestamp
+
+        Returns
+        -------
+        boolean
+            True if the logon is already in the database
+            False if the logon is not in the database
+        """
         exists = None
         try:
             Passage.objects.get(person_id=user_id,
