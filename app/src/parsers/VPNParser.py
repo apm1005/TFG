@@ -56,7 +56,7 @@ class VPNParser:
         return os.listdir('..\\log_examples\\vpn_logs')
 
     @staticmethod
-    def __create_event(instant, event_type):
+    def __create_event(instant, end_time, event_type):
         """
         Creates an event for an instant and type of event specified
 
@@ -64,6 +64,8 @@ class VPNParser:
         ----------
         instant : timestamp
             timestamp of the event
+        end_time : timestamp
+            final timestamp of the event
         event_type : str
             type of the event
 
@@ -73,6 +75,8 @@ class VPNParser:
             an int that identifies an event
         """
         identifier = None
+        if end_time is not None:
+            instant = end_time
         try:
             type_of_event = Eventtype.objects.get(type=event_type)
             event = Event.objects.create(instant=instant, event_type=type_of_event)
@@ -221,6 +225,63 @@ class VPNParser:
                                item_id=item_id,
                                person_id=user_id)
 
+    @staticmethod
+    def __check_if_exists(instant, user_id, app_id):
+        """
+        Checks if a passage is already in the database
+
+        Parameters
+        ----------
+        instant : timestamp
+            timestamp of the event
+        user_id : int
+            user identifier
+        app_id : int
+            app identifier
+
+        Returns
+        -------
+        boolean
+            True if the passage is already in the database
+            False if the passage is not in the database
+        """
+        exists = None
+        try:
+            Passage.objects.get(start_time=instant,
+                                person_id=user_id,
+                                app_id=app_id)
+            exists = True
+        except DoesNotExist:
+            exists = False
+        finally:
+            return exists
+
+    @staticmethod
+    def __update_passage(instant, end_time, user_id, app_id):
+        """
+        Updates the end_time of a passage in case it exists
+
+        Parameters
+        ----------
+        instant : timestamp
+            timestamp of the event
+        end_time: timestamp
+            final timestamp of the event
+        user_id : int
+            user identifier
+        app_id : int
+            app identifier
+        """
+        try:
+            if end_time is not None:
+                passage = Passage.objects.get(start_time=instant,
+                                              person_id=user_id,
+                                              app_id=app_id)
+                passage.end_time = end_time
+                passage.save()
+        except DoesNotExist:
+            print('Something went wrong, no passage found!')
+
     def __create_objects(self, summary):
         """
         Creates the objects based on the summary given
@@ -241,15 +302,14 @@ class VPNParser:
         if start_time is not None:
             end_time = instant
             instant = start_time
-            event_type = 'log in'
 
-        event_id = self.__create_event(instant=instant, event_type=event_type)
-        self.__create_passage(instant=instant,
-                              end_time=end_time,
-                              app_id=app_id,
-                              event_id=event_id,
-                              item_id=item_id,
-                              user_id=user_id)
+        if not self.__check_if_exists(instant=instant, user_id=user_id, app_id=app_id):
+            event_id = self.__create_event(instant=instant, end_time=end_time, event_type=event_type)
+            self.__create_passage(instant=instant, end_time=end_time,
+                                  app_id=app_id, event_id=event_id,
+                                  item_id=item_id, user_id=user_id)
+        else:
+            self.__update_passage(instant, end_time, user_id, app_id)
 
     @staticmethod
     def __delete_files(files):
