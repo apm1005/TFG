@@ -1,0 +1,15 @@
+{% extends "logscope/base.html" %}
+{% block content %}
+    {% for passage in passages %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ passage.app }}</a>
+              <small class="text-muted">{{ passage.item }}</small>
+            </div>
+            <h4><a class="article-title" href="#">{{ passage.person }}</a></h4>
+            <p class="article-content">{{ passage.start_time }} - {{ passage.end_time }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

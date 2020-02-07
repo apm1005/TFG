@@ -7,7 +7,7 @@ class Person(models.Model):
     login = models.CharField(max_length=20, blank=True, null=True)
 
     def __str__(self):
-        return str(self.login) + ' - ' + str(self.name)
+        return str(self.login)
 
     class Meta:
         constraints = [
@@ -78,7 +78,7 @@ class App(models.Model):
     server = models.ForeignKey(Environment, models.DO_NOTHING, db_column='server', blank=True, null=True)
 
     def __str__(self):
-        return str(self.name) + ' - ' + str(self.server)
+        return str(self.name)
 
 
 class Passage(models.Model):

@@ -2,12 +2,7 @@ import xml.etree.ElementTree as et
 import datetime
 import locale
 import os
-from persons.models import Person
-from eventtypes.models import Eventtype
-from events.models import Event
-from applications.models import App
-from passages.models import Passage
-from items.models import Item
+from logscope.models import Person, Eventtype, Event, App, Passage, Item
 
 
 class VPNParser:

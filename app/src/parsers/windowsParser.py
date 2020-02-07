@@ -2,11 +2,7 @@ import os
 import numpy as np
 import locale
 import datetime
-from persons.models import Person
-from eventtypes.models import Eventtype
-from events.models import Event
-from applications.models import App
-from passages.models import Passage
+from logscope.models import Person, Eventtype, Event, App, Passage
 
 
 class LanguageNotSupported(Exception):
