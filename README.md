@@ -1,10 +1,10 @@
-# TFG 
+# LogScope
 
 Platform that allows system administrators to keep track of access to business applications and the network through VPN access.
 
 Notice that all SQL scripts are <span style="color:#CB2400">only</span> warrantied to work on MySQL.
 
-## REQUIREMENTS FOR DEVELOPER
+## REQUIREMENTS FOR DEVELOPERS
 * MySQL 5.7.28
 * MySQL Workbench (Optional)
 * Python 3.7.5

@@ -32,23 +32,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # own
+    'logscope.apps.LogscopeConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # own
-    'applications',
-    'environments',
-    'events',
-    'eventtypes',
-    'items',
-    'itemtypes',
-    'passages',
-    'personitems',
-    'persons',
 ]
 
 MIDDLEWARE = [

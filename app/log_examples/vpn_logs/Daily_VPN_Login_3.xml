@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SummaryReport [
+	<!ELEMENT Date (Day | Month | Year)>
+	<!ELEMENT Day (#PCDATA)>
+	<!ELEMENT Month (#PCDATA)>
+	<!ELEMENT Year (#PCDATA)>
+	<!ELEMENT TimeZone	(#PCDATA)>
+	<!ELEMENT SerialNumber (#PCDATA)>
+	<!ELEMENT NodeName (#PCDATA)>
+	<!ELEMENT SummaryReport (Unit*)>
+	<!ELEMENT Unit  (User*)>
+	<!ATTLIST Unit displayname CDATA #IMPLIED>
+	<!ELEMENT User EMPTY>
+	<!ELEMENT NameOrIP  (#PCDATA)>
+	<!ELEMENT Source  (#PCDATA)>
+	<!ELEMENT Hits (#PCDATA)>
+	<!ELEMENT Connections	(#PCDATA)>
+	<!ELEMENT Events (#PCDATA)>
+	<!ELEMENT Bytes	(#PCDATA)>
+	<!ELEMENT Type (#PCDATA)>
+	<!ELEMENT Attacks	(#PCDATA)>
+	<!ELEMENT Rank     (#PCDATA)> ]>
+
+
+<XmlReports>
+	<SummaryReport>
+	   <ReportName>Informes personalizados - VPN Login</ReportName>
+	      <StartDate>
+			<Day></Day>
+			<Month>1</Month>
+			<Year></Year>
+	       </StartDate>
+	      <SerialNumber>SERIALNUMBER</SerialNumber>
+	      <Unit displayname="NAME (SERIALNUMBER)"></Unit>
+	      <TimeZone></TimeZone>
+		 <SectionName>Inicios de sesión de usuario</SectionName>
+			<Summary>
+				<Hora>01-mar-2019 23:43:02</Hora>
+				<IPdeliniciador>192.168.1.34</IPdeliniciador>
+				<Usuario>Adrian@asti.dom</Usuario>
+				<Hostdeliniciador></Hostdeliniciador>
+				<IniciadorMAC></IniciadorMAC>
+				<Duración>00:24:00</Duración>
+				<Servicio>NetExtender</Servicio>
+				<Mensaje>User logged out - Adrian</Mensaje>
+			</Summary>
+			<Summary>
+				<Hora>01-abr-2019 23:32:50</Hora>
+				<IPdeliniciador>192.168.1.34</IPdeliniciador>
+				<Usuario>ASTI\\Adrian</Usuario>
+				<Hostdeliniciador></Hostdeliniciador>
+				<IniciadorMAC></IniciadorMAC>
+				<Duración>15:30:00</Duración>
+				<Servicio>Auto</Servicio>
+				<Mensaje>User logged out - logout detected by Adrian</Mensaje>
+			</Summary>
+			<Summary>
+				<Hora>01-may-2019 23:19:05</Hora>
+				<IPdeliniciador>80.31.27.15</IPdeliniciador>
+				<Usuario>Adrian@asti.dom</Usuario>
+				<Hostdeliniciador></Hostdeliniciador>
+				<IniciadorMAC></IniciadorMAC>
+				<Duración>N/A</Duración>
+				<Servicio>NetExtender</Servicio>
+				<Mensaje>SSL VPN zone remote user login allowed</Mensaje>
+			</Summary>
+			<Summary>
+				<Hora>01-jun-2019 21:49:36</Hora>
+				<IPdeliniciador>10.1.4.113</IPdeliniciador>
+				<Usuario>ASTI\\Adrian</Usuario>
+				<Hostdeliniciador></Hostdeliniciador>
+				<IniciadorMAC></IniciadorMAC>
+				<Duración>N/A</Duración>
+				<Servicio></Servicio>
+				<Mensaje>User login from an internal zone allowed</Mensaje>
+			</Summary>
+			<Summary>
+				<Hora>01-jul-2019 21:19:45</Hora>
+				<IPdeliniciador>192.168.192.49</IPdeliniciador>
+				<Usuario>Adrian@asti.dom</Usuario>
+				<Hostdeliniciador></Hostdeliniciador>
+				<IniciadorMAC></IniciadorMAC>
+				<Duración>02:08:00</Duración>
+				<Servicio>NetExtender</Servicio>
+				<Mensaje>User logged out - Adrian</Mensaje>
+			</Summary>
+			<Summary>
+				<Hora>01-ago-2019 21:13:17</Hora>
+				<IPdeliniciador>10.1.4.113</IPdeliniciador>
+				<Usuario>ASTI\\Adrian</Usuario>
+				<Hostdeliniciador></Hostdeliniciador>
+				<IniciadorMAC></IniciadorMAC>
+				<Duración>00:09:00</Duración>
+				<Servicio>Auto</Servicio>
+				<Mensaje>User logged out - logout detected by Adrian</Mensaje>
+			</Summary>
+			<Summary>
+				<Hora>01-sep-2019 21:10:08</Hora>
+				<IPdeliniciador>192.168.1.34</IPdeliniciador>
+				<Usuario>Adrian@asti.dom</Usuario>
+				<Hostdeliniciador></Hostdeliniciador>
+				<IniciadorMAC></IniciadorMAC>
+				<Duración>01:15:00</Duración>
+				<Servicio>NetExtender</Servicio>
+				<Mensaje>User logged out - Adrian</Mensaje>
+			</Summary>
+	</SummaryReport>
+</XmlReports>
