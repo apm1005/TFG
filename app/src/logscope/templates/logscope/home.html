@@ -1,15 +1,35 @@
 {% extends "logscope/base.html" %}
 {% block content %}
-    {% for passage in passages %}
-        <article class="media content-section">
-          <div class="media-body">
-            <div class="article-metadata">
-              <a class="mr-2" href="#">{{ passage.app }}</a>
-              <small class="text-muted">{{ passage.item }}</small>
-            </div>
-            <h4><a class="article-title" href="#">{{ passage.person }}</a></h4>
-            <p class="article-content">{{ passage.start_time }} - {{ passage.end_time }}</p>
-          </div>
-        </article>
-    {% endfor %}
+    <article class="media content-section">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Person</th>
+                    <th scope="col">Start time</th>
+                    <th scope="col">End time</th>
+                    <th scope="col">App</th>
+                    <th scope="col">Item</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for passage in passages %}
+                <tr>
+                    <td>{{ passage.person }}</td>
+                    <td>{{ passage.start_time|date:"d-m-Y H:i:s" }}</td>
+                    {% if passage.end_time %}
+                        <td>{{ passage.end_time|date:"d-m-Y H:i:s" }}</td>
+                    {% else %}
+                        <td> - </td>
+                    {% endif %}
+                    <td>{{ passage.app }}</td>
+                    {% if passage.item %}
+                        <td>{{ passage.item }}</td>
+                    {% else %}
+                        <td> - </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </article>
 {% endblock content %}
