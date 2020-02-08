@@ -1,5 +1,6 @@
 {% extends "logscope/base.html" %}
 {% block content %}
+    <h2 class="mb-3">Passages by {{ view.kwargs.name }} ({{ page_obj.paginator.count }})</h2>
     <article class="media content-section">
         <!-- Passages table -->
         <table class="table table-bordered">

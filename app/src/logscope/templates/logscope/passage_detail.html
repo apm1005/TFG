@@ -11,7 +11,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ object.person }}</td>
+                    <td><a class="mr-2" href="{% url 'person-passages' object.person.name %}">{{ object.person }}</a></td>
                     <td>{{ object.start_time|date:"d-m-Y H:i:s" }}</td>
                     {% if object.end_time %}
                         <td>{{ object.end_time|date:"d-m-Y H:i:s" }}</td>
