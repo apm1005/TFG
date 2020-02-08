@@ -1,0 +1,34 @@
+{% extends "logscope/base.html" %}
+{% block content %}
+    <article class="media content-section">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <th scope="col">Person</th>
+                <th scope="col">Start time</th>
+                <th scope="col">End time</th>
+                <th scope="col">App</th>
+                <th scope="col">Item</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ object.person }}</td>
+                    <td>{{ object.start_time|date:"d-m-Y H:i:s" }}</td>
+                    {% if object.end_time %}
+                        <td>{{ object.end_time|date:"d-m-Y H:i:s" }}</td>
+                    {% else %}
+                        <td> - </td>
+                    {% endif %}
+                    <td>{{ object.app }}</td>
+                    {% if object.item %}
+                        <td>{{ object.item }}</td>
+                    {% else %}
+                        <td> - </td>
+                    {% endif %}
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <div class="content-section">
+        <a class="btn btn-danger btn-sm" href="{% url 'passage-delete' object.id %}">DELETE PASSAGE</a>
+    </div>
+{% endblock content %}

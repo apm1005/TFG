@@ -1,5 +1,15 @@
 from django.contrib import admin
-from .models import App, Environment, Event, Eventtype, Item, Itemtype, Passage, Personitems, Person
+from .models import (
+    App,
+    Environment,
+    Event,
+    Eventtype,
+    Item,
+    Itemtype,
+    Passage,
+    Personitems,
+    Person,
+)
 
 
 admin.site.register(App)

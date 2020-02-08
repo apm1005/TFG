@@ -4,6 +4,7 @@
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
+                    <th scope="col">#</th>
                     <th scope="col">Person</th>
                     <th scope="col">Start time</th>
                     <th scope="col">End time</th>
@@ -14,6 +15,7 @@
             <tbody>
                 {% for passage in passages %}
                 <tr>
+                    <td><a href="{% url 'passage-detail' passage.id %}">{{ passage.id }}</a></td>
                     <td>{{ passage.person }}</td>
                     <td>{{ passage.start_time|date:"d-m-Y H:i:s" }}</td>
                     {% if passage.end_time %}
