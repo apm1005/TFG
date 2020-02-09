@@ -1,6 +1,26 @@
 {% extends "logscope/base.html" %}
 {% block content %}
     <article class="media content-section">
+        <!-- Search form -->
+        <form method="GET" action="{% url 'logscope-passage' %}">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" name="person" value="{{ person }}" class="form-control" placeholder="Person">
+                </div>
+                <div class="col">
+                    <input type="date" name="date" value="{{ date }}" class="form-control">
+                </div>
+                <div class="col">
+                    <input type="text" name="app" value="{{ app }}" class="form-control" placeholder="App">
+                </div>
+                <div class="col">
+                    <input type="text" name="item" value="{{ item }}" class="form-control" placeholder="Item">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </article>
+    <article class="media content-section">
         <!-- Passages table -->
         <table class="table table-bordered">
             <thead class="thead-dark">
@@ -49,7 +69,7 @@
             {% endif %}
         {% endfor %}
         {% if page_obj.has_next %}
-            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number}}">Next</a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
             <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
         {% endif %}
     {% endif %}

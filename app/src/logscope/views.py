@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.db.models import Q
 from django.views.generic import (
     ListView,
     DetailView,
@@ -15,8 +16,29 @@ class PassageListView(ListView):
     model = Passage
     template_name = 'logscope/passage.html'
     context_object_name = 'passages'
-    ordering = ['-start_time']
     paginate_by = 10
+
+    def get_queryset(self):
+        """Method to filter a search by person, app and date"""
+        filter_set = Passage.objects.all()
+
+        if self.request.GET.get('person'):
+            person = self.request.GET.get('person')
+            filter_set = filter_set.filter(person__login__icontains=person)
+
+        if self.request.GET.get('date'):
+            date = self.request.GET.get('date')
+            filter_set = filter_set.filter(start_time__icontains=date)
+
+        if self.request.GET.get('app'):
+            app = self.request.GET.get('app')
+            filter_set = filter_set.filter(app__name__icontains=app)
+
+        if self.request.GET.get('item'):
+            item = self.request.GET.get('item')
+            filter_set = filter_set.filter(item__item_type__type__icontains=item)
+
+        return filter_set.order_by('-start_time')
 
 
 class PersonPassageListView(ListView):
