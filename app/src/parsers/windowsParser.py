@@ -1,8 +1,13 @@
+from .parser import Parser
+from logscope.models import (
+    App,
+    Eventtype,
+    Person,
+)
 import os
 import numpy as np
 import locale
 import datetime
-from logscope.models import Person, Eventtype, Event, App, Passage
 
 
 class LanguageNotSupported(Exception):
@@ -14,7 +19,7 @@ class LanguageNotSupported(Exception):
         self.message = message
 
 
-class WindowsParser:
+class WindowsParser(Parser):
     """
     Class that executes a command in Windows to extract the last login of the users
     """
@@ -77,14 +82,13 @@ class WindowsParser:
             command = f'net user {user_login} | findstr /B /C:"{logon_string}"'
             timestamp_logon = str(os.popen(command).read())
             if timestamp_logon != '':
-                parsed_timestamp = self.__parse_timestamp(
+                parsed_timestamp = self._parse_timestamp(
                     timestamp_logon[-date_length:].replace('?', '').replace('\n', ''))
                 result[i, 2] = parsed_timestamp
 
         return result
 
-    @staticmethod
-    def __parse_timestamp(timestamp):
+    def _parse_timestamp(self, timestamp):
         """
         Parses the timestamp given to a format that the ORM can store
 
@@ -101,77 +105,7 @@ class WindowsParser:
         units = datetime.datetime.strptime(timestamp, '%d/%m/%Y %H:%M:%S')
         return datetime.datetime.strftime(units, '%Y-%m-%d %H:%M:%S')
 
-    @staticmethod
-    def __create_event(user_last_logon):
-        """
-        Creates an Event in the database
-
-        Parameters
-        ----------
-        user_last_logon : timestamp
-            user last logon timestamp
-
-        Returns
-        -------
-        int
-            identifier for the event created
-        """
-        type_of_event = Eventtype.objects.get(type='log in')
-        event = Event.objects.create(instant=user_last_logon, event_type=type_of_event)
-        event.save()
-        return event.id
-
-    @staticmethod
-    def __create_passage(user_id, user_last_logon, event_id):
-        """
-        Creates a Passage in the database
-
-        Parameters
-        ----------
-        user_id : int
-            user identifier
-        user_last_logon : timestamp
-            user last logon timestamp
-        event_id : int
-            event identifier
-        """
-        Passage.objects.create(start_time=user_last_logon,
-                               end_time=None,
-                               app_id=App.objects.get(name='Windows').id,
-                               event_id=event_id,
-                               item_id=None,
-                               person_id=user_id)
-
-    @staticmethod
-    def __check_if_exists(user_id, user_last_logon):
-        """
-        Checks if a logon is already in the database
-
-        Parameters
-        ----------
-        user_id : int
-            user identifier
-        user_last_logon : timestamp
-            user last logon timestamp
-
-        Returns
-        -------
-        boolean
-            True if the logon is already in the database
-            False if the logon is not in the database
-        """
-        exists = None
-        try:
-            Passage.objects.get(person_id=user_id,
-                                start_time=user_last_logon,
-                                app_id=App.objects.get(name='Windows').id)
-            exists = True
-        except DoesNotExist:
-            exists = False
-        finally:
-            return exists
-
-    def __store_data(self):
+    def store_data(self):
         """
         Stores the data into the Event entity and Passage entity
         """
@@ -179,13 +113,16 @@ class WindowsParser:
 
         for i, user in enumerate(users):
             user_id, user_login, user_last_logon = user
-            if user_last_logon is not None and not self.__check_if_exists(user_id=user_id,
-                                                                          user_last_logon=user_last_logon):
-                event_id = self.__create_event(user_last_logon=user_last_logon)
-                self.__create_passage(user_id=user_id, user_last_logon=user_last_logon, event_id=event_id)
-
-    def parse(self):
-        """
-        Parses the login of each person from Windows and stores it in the database
-        """
-        self.__store_data()
+            if user_last_logon is not None \
+                    and not super()._check_if_passage_exists(instant=user_last_logon,
+                                                             user_id=user_id,
+                                                             app_id=App.objects.get(name='Windows').id):
+                event_id = super()._create_event(instant=user_last_logon,
+                                                 end_time=None,
+                                                 event_type=Eventtype.objects.get(type='log in'))
+                super()._create_passage(instant=user_last_logon,
+                                        end_time=None,
+                                        app_id=App.objects.get(name='Windows').id,
+                                        event_id=event_id,
+                                        item_id=None,
+                                        user_id=user_id)
