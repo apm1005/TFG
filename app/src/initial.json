@@ -1,0 +1,1774 @@
+[
+{
+    "model": "logscope.person",
+    "pk": 1,
+    "fields": {
+        "name": "Adri\u00e1n Pineda Mi\u00f1\u00f3n",
+        "login": "Adrian"
+    }
+},
+{
+    "model": "logscope.person",
+    "pk": 2,
+    "fields": {
+        "name": "Usuario Desconocido",
+        "login": "Usuario"
+    }
+},
+{
+    "model": "logscope.itemtype",
+    "pk": "Computer",
+    "fields": {
+        "model": "Asus"
+    }
+},
+{
+    "model": "logscope.item",
+    "pk": 1,
+    "fields": {
+        "item_type": "Computer",
+        "ip_address": "192.168.1.34",
+        "mac_address": "91-C2-35-71-86-2B"
+    }
+},
+{
+    "model": "logscope.personitems",
+    "pk": 1,
+    "fields": {
+        "item": 1
+    }
+},
+{
+    "model": "logscope.personitems",
+    "pk": 2,
+    "fields": {
+        "item": 1
+    }
+},
+{
+    "model": "logscope.eventtype",
+    "pk": "log in",
+    "fields": {
+        "description": "go through the procedures to begin use of an app"
+    }
+},
+{
+    "model": "logscope.eventtype",
+    "pk": "log out",
+    "fields": {
+        "description": "go through the procedures to conclude use of an app"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 1,
+    "fields": {
+        "instant": "2019-01-01T23:43:02",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 2,
+    "fields": {
+        "instant": "2019-02-01T23:32:50",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 3,
+    "fields": {
+        "instant": "2019-03-01T23:19:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 4,
+    "fields": {
+        "instant": "2019-04-01T21:49:36",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 5,
+    "fields": {
+        "instant": "2019-05-01T21:19:45",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 6,
+    "fields": {
+        "instant": "2019-06-01T21:13:17",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 7,
+    "fields": {
+        "instant": "2019-07-01T21:10:08",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 8,
+    "fields": {
+        "instant": "2019-08-01T23:43:02",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 9,
+    "fields": {
+        "instant": "2019-09-01T23:32:50",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 10,
+    "fields": {
+        "instant": "2019-10-01T23:19:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 11,
+    "fields": {
+        "instant": "2019-11-01T21:49:36",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 12,
+    "fields": {
+        "instant": "2019-12-01T21:19:45",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 13,
+    "fields": {
+        "instant": "2019-01-01T21:13:17",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 14,
+    "fields": {
+        "instant": "2019-02-01T21:10:08",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 15,
+    "fields": {
+        "instant": "2019-03-01T23:43:02",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 16,
+    "fields": {
+        "instant": "2019-04-01T23:32:50",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 17,
+    "fields": {
+        "instant": "2019-05-01T23:19:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 18,
+    "fields": {
+        "instant": "2019-06-01T21:49:36",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 19,
+    "fields": {
+        "instant": "2019-07-01T21:19:45",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 20,
+    "fields": {
+        "instant": "2019-08-01T21:13:17",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 21,
+    "fields": {
+        "instant": "2019-09-01T21:10:08",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 22,
+    "fields": {
+        "instant": "2020-02-07T20:14:57",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 23,
+    "fields": {
+        "instant": "2020-02-08T15:02:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 24,
+    "fields": {
+        "instant": "2020-02-08T15:02:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 25,
+    "fields": {
+        "instant": "2020-02-08T15:02:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 26,
+    "fields": {
+        "instant": "2020-02-08T15:02:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 27,
+    "fields": {
+        "instant": "2020-02-08T15:02:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 28,
+    "fields": {
+        "instant": "2020-02-09T15:18:07",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 29,
+    "fields": {
+        "instant": "2020-02-09T22:04:39",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 30,
+    "fields": {
+        "instant": "2020-02-09T22:04:39",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 31,
+    "fields": {
+        "instant": "2019-01-05T23:43:02",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 32,
+    "fields": {
+        "instant": "2019-02-05T23:32:50",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 33,
+    "fields": {
+        "instant": "2019-03-05T23:19:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 34,
+    "fields": {
+        "instant": "2019-04-05T21:49:36",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 35,
+    "fields": {
+        "instant": "2019-05-05T21:19:45",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 36,
+    "fields": {
+        "instant": "2019-06-05T21:13:17",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 37,
+    "fields": {
+        "instant": "2019-07-05T21:10:08",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 38,
+    "fields": {
+        "instant": "2020-02-10T11:44:02",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 39,
+    "fields": {
+        "instant": "2019-01-07T23:43:02",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 40,
+    "fields": {
+        "instant": "2019-02-07T23:32:50",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 41,
+    "fields": {
+        "instant": "2019-03-07T23:19:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 42,
+    "fields": {
+        "instant": "2019-04-07T21:49:36",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 43,
+    "fields": {
+        "instant": "2019-05-07T21:19:45",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 44,
+    "fields": {
+        "instant": "2019-06-07T21:13:17",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 45,
+    "fields": {
+        "instant": "2019-07-07T21:10:08",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 46,
+    "fields": {
+        "instant": "2020-02-10T14:09:11",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 47,
+    "fields": {
+        "instant": "2019-03-04T23:43:02",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 48,
+    "fields": {
+        "instant": "2019-04-04T23:32:50",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 49,
+    "fields": {
+        "instant": "2019-05-04T23:19:05",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 50,
+    "fields": {
+        "instant": "2019-06-04T21:49:36",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 51,
+    "fields": {
+        "instant": "2019-07-04T21:19:45",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 52,
+    "fields": {
+        "instant": "2019-08-04T21:13:17",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 53,
+    "fields": {
+        "instant": "2019-09-04T21:10:08",
+        "event_type": "log out"
+    }
+},
+{
+    "model": "logscope.environment",
+    "pk": "localhost",
+    "fields": {
+        "ip_address": "127.0.0.1"
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 1,
+    "fields": {
+        "name": "VPN",
+        "description": "Virtual Private Network",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 2,
+    "fields": {
+        "name": "Windows",
+        "description": "Windows OS",
+        "server": "localhost"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 1,
+    "fields": {
+        "event": 1,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-01-01T23:19:02",
+        "end_time": "2019-01-01T23:43:02"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 2,
+    "fields": {
+        "event": 2,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-02-01T08:02:50",
+        "end_time": "2019-02-01T23:32:50"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 3,
+    "fields": {
+        "event": 3,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-03-01T23:19:05",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 4,
+    "fields": {
+        "event": 4,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-04-01T21:49:36",
+        "end_time": "2019-04-01T23:59:46"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 5,
+    "fields": {
+        "event": 5,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-05-01T19:11:45",
+        "end_time": "2019-05-01T21:19:45"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 6,
+    "fields": {
+        "event": 6,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-06-01T21:04:17",
+        "end_time": "2019-06-01T21:13:17"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 7,
+    "fields": {
+        "event": 7,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-07-01T19:55:08",
+        "end_time": "2019-07-01T21:10:08"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 8,
+    "fields": {
+        "event": 8,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-08-01T23:19:02",
+        "end_time": "2019-08-01T23:43:02"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 9,
+    "fields": {
+        "event": 9,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-09-01T08:02:50",
+        "end_time": "2019-09-01T23:32:50"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 10,
+    "fields": {
+        "event": 10,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-10-01T23:19:05",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 11,
+    "fields": {
+        "event": 11,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-11-01T21:49:36",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 12,
+    "fields": {
+        "event": 12,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-12-01T19:11:45",
+        "end_time": "2019-12-01T21:19:45"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 13,
+    "fields": {
+        "event": 13,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-01-01T21:04:17",
+        "end_time": "2019-01-01T21:13:17"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 14,
+    "fields": {
+        "event": 14,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-02-01T19:55:08",
+        "end_time": "2019-02-01T21:10:08"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 15,
+    "fields": {
+        "event": 15,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-03-01T23:19:02",
+        "end_time": "2019-03-01T23:43:02"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 16,
+    "fields": {
+        "event": 16,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-04-01T08:02:50",
+        "end_time": "2019-04-01T23:32:50"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 17,
+    "fields": {
+        "event": 17,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-05-01T23:19:05",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 18,
+    "fields": {
+        "event": 18,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-06-01T21:49:36",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 19,
+    "fields": {
+        "event": 19,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-07-01T19:11:45",
+        "end_time": "2019-07-01T21:19:45"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 20,
+    "fields": {
+        "event": 20,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-08-01T21:04:17",
+        "end_time": "2019-08-01T21:13:17"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 21,
+    "fields": {
+        "event": 21,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-09-01T19:55:08",
+        "end_time": "2019-09-01T21:10:08"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 27,
+    "fields": {
+        "event": 27,
+        "app": 2,
+        "person": 1,
+        "item": null,
+        "start_time": "2020-02-08T15:02:05",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 28,
+    "fields": {
+        "event": 28,
+        "app": 2,
+        "person": 1,
+        "item": null,
+        "start_time": "2020-02-09T15:18:07",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 29,
+    "fields": {
+        "event": 30,
+        "app": 2,
+        "person": 1,
+        "item": null,
+        "start_time": "2020-02-09T22:04:39",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 30,
+    "fields": {
+        "event": 31,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-01-05T23:19:02",
+        "end_time": "2019-01-05T23:43:02"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 31,
+    "fields": {
+        "event": 32,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-02-05T08:02:50",
+        "end_time": "2019-02-05T23:32:50"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 32,
+    "fields": {
+        "event": 33,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-03-05T23:19:05",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 33,
+    "fields": {
+        "event": 34,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-04-05T21:49:36",
+        "end_time": "2019-04-05T23:59:46"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 34,
+    "fields": {
+        "event": 35,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-05-05T19:11:45",
+        "end_time": "2019-05-05T21:19:45"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 35,
+    "fields": {
+        "event": 36,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-06-05T21:04:17",
+        "end_time": "2019-06-05T21:13:17"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 36,
+    "fields": {
+        "event": 37,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-07-05T19:55:08",
+        "end_time": "2019-07-05T21:10:08"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 37,
+    "fields": {
+        "event": 38,
+        "app": 2,
+        "person": 1,
+        "item": null,
+        "start_time": "2020-02-10T11:44:02",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 38,
+    "fields": {
+        "event": 39,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-01-07T23:19:02",
+        "end_time": "2019-01-07T23:43:02"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 39,
+    "fields": {
+        "event": 40,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-02-07T08:02:50",
+        "end_time": "2019-02-07T23:32:50"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 40,
+    "fields": {
+        "event": 41,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-03-07T23:19:05",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 41,
+    "fields": {
+        "event": 42,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-04-07T21:49:36",
+        "end_time": "2019-04-07T23:59:46"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 42,
+    "fields": {
+        "event": 43,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-05-07T19:11:45",
+        "end_time": "2019-05-07T21:19:45"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 43,
+    "fields": {
+        "event": 44,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-06-07T21:04:17",
+        "end_time": "2019-06-07T21:13:17"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 44,
+    "fields": {
+        "event": 45,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-07-07T19:55:08",
+        "end_time": "2019-07-07T21:10:08"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 45,
+    "fields": {
+        "event": 46,
+        "app": 2,
+        "person": 1,
+        "item": null,
+        "start_time": "2020-02-10T14:09:11",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 46,
+    "fields": {
+        "event": 47,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-03-04T23:19:02",
+        "end_time": "2019-03-04T23:43:02"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 47,
+    "fields": {
+        "event": 48,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-04-04T08:02:50",
+        "end_time": "2019-04-04T23:32:50"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 48,
+    "fields": {
+        "event": 49,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-05-04T23:19:05",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 49,
+    "fields": {
+        "event": 50,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-06-04T21:49:36",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 50,
+    "fields": {
+        "event": 51,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-07-04T19:11:45",
+        "end_time": "2019-07-04T21:19:45"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 51,
+    "fields": {
+        "event": 52,
+        "app": 1,
+        "person": 1,
+        "item": null,
+        "start_time": "2019-08-04T21:04:17",
+        "end_time": "2019-08-04T21:13:17"
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 52,
+    "fields": {
+        "event": 53,
+        "app": 1,
+        "person": 1,
+        "item": 1,
+        "start_time": "2019-09-04T19:55:08",
+        "end_time": "2019-09-04T21:10:08"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "logscope",
+        "model": "app"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "logscope",
+        "model": "environment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "logscope",
+        "model": "event"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "logscope",
+        "model": "eventtype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "logscope",
+        "model": "item"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "logscope",
+        "model": "itemtype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "logscope",
+        "model": "passage"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "logscope",
+        "model": "person"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "logscope",
+        "model": "personitems"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ma21ai4rs2xm3stgi1poxo68x5wcyc9w",
+    "fields": {
+        "session_data": "OWRhNTg2ZTM5ZTM1NzljNTVhZDRkYzkyNzdmNTA0MGUzOThkZTM5MDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJlZWExZDY4MjRjNGY0NzI0MGZlMDBiODJkOGNjNTRhNzI0NTU2YWY2In0=",
+        "expire_date": "2020-02-22T18:50:46.525"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add app",
+        "content_type": 1,
+        "codename": "add_app"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change app",
+        "content_type": 1,
+        "codename": "change_app"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete app",
+        "content_type": 1,
+        "codename": "delete_app"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view app",
+        "content_type": 1,
+        "codename": "view_app"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add environment",
+        "content_type": 2,
+        "codename": "add_environment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change environment",
+        "content_type": 2,
+        "codename": "change_environment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete environment",
+        "content_type": 2,
+        "codename": "delete_environment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view environment",
+        "content_type": 2,
+        "codename": "view_environment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add event",
+        "content_type": 3,
+        "codename": "add_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change event",
+        "content_type": 3,
+        "codename": "change_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete event",
+        "content_type": 3,
+        "codename": "delete_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view event",
+        "content_type": 3,
+        "codename": "view_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add eventtype",
+        "content_type": 4,
+        "codename": "add_eventtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change eventtype",
+        "content_type": 4,
+        "codename": "change_eventtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete eventtype",
+        "content_type": 4,
+        "codename": "delete_eventtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view eventtype",
+        "content_type": 4,
+        "codename": "view_eventtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add item",
+        "content_type": 5,
+        "codename": "add_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change item",
+        "content_type": 5,
+        "codename": "change_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete item",
+        "content_type": 5,
+        "codename": "delete_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view item",
+        "content_type": 5,
+        "codename": "view_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add itemtype",
+        "content_type": 6,
+        "codename": "add_itemtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change itemtype",
+        "content_type": 6,
+        "codename": "change_itemtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete itemtype",
+        "content_type": 6,
+        "codename": "delete_itemtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view itemtype",
+        "content_type": 6,
+        "codename": "view_itemtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add passage",
+        "content_type": 7,
+        "codename": "add_passage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change passage",
+        "content_type": 7,
+        "codename": "change_passage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete passage",
+        "content_type": 7,
+        "codename": "delete_passage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view passage",
+        "content_type": 7,
+        "codename": "view_passage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add person",
+        "content_type": 8,
+        "codename": "add_person"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change person",
+        "content_type": 8,
+        "codename": "change_person"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete person",
+        "content_type": 8,
+        "codename": "delete_person"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view person",
+        "content_type": 8,
+        "codename": "view_person"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add personitems",
+        "content_type": 9,
+        "codename": "add_personitems"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change personitems",
+        "content_type": 9,
+        "codename": "change_personitems"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete personitems",
+        "content_type": 9,
+        "codename": "delete_personitems"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view personitems",
+        "content_type": 9,
+        "codename": "view_personitems"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 10,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 10,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 10,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 10,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 11,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 11,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 11,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 11,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 12,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 12,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 12,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 12,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 13,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 13,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 13,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 13,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 14,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 14,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 14,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 14,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 15,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 15,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 15,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 15,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$Vu2I4s9Zsp0C$jX40oHyid67wMgdygPslSHIydauG5g9KwCs6fxrHGas=",
+        "last_login": "2020-02-08T18:50:46.519",
+        "is_superuser": true,
+        "username": "root",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-02-07T21:40:25.646",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2020-02-08T18:51:02.263",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Adrian",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+    }
+}
+]
