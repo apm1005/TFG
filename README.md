@@ -64,6 +64,19 @@ manage.py migrate
 ```
 For the last step, you can use the ```~\app\db\create_test_user.sql``` script as an example of initial data.
 
+### Fixtures
+Django provides an easy way to set some initial data with manage.py.
+
+First of all, you can extract the current data from your database with:
+```cmd
+cd ~\app\src
+manage.py dumpdata --format json --indent 4 > initial.json
+```
+Now you can use this json file (or one created by yourself) to import data to the database with:
+```cmd
+cd ~\app\src
+manage.py loaddata initial.json
+```
 
 ## TOOLS
 
