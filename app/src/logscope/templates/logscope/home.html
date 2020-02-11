@@ -1,6 +1,18 @@
-{% extends "logscope/base.html" %}
 {% load static %}
-{% block content %}
-    <!-- Under construction image -->
-    <img src="{% static 'logscope/UnderConstruction.png' %}" style="margin-left: auto; margin-right: auto; width: 50%;">
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'logscope/bootstrap.css' %}">
+
+    <title>LogScope</title>
+</head>
+<body style="background: #75C1FF;">
+    <center>
+        <img src="{% static 'logscope/lense.png' %}">
+    </center>
+    <div style="text-align: center;">
+        <a type="button" class="btn btn-light btn-lg" href="{% url 'logscope-passage' %}">START</a>
+    </div>
+</body>
+</html>
