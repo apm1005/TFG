@@ -1,15 +1,15 @@
 from django.shortcuts import render, get_object_or_404
-from django.db.models import Q
 from django.views.generic import (
     ListView,
     DetailView,
     DeleteView,
+    TemplateView,
 )
 from .models import Passage, Person
 
 
-def home(request):
-    return render(request, 'logscope/home.html')
+class HomeView(TemplateView):
+    template_name = 'logscope/home.html'
 
 
 class PassageListView(ListView):
