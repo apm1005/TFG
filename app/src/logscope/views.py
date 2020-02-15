@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404
 from django.views.generic import (
     ListView,
     DetailView,
@@ -17,28 +17,27 @@ class PassageListView(ListView):
     template_name = 'logscope/passage.html'
     context_object_name = 'passages'
     paginate_by = 10
+    ordering = ['-start_time']
 
     def get_queryset(self):
-        """Method to filter a search by person, app and date"""
-        filter_set = Passage.objects.all()
-
-        if self.request.GET.get('person'):
+        qs = super().get_queryset()
+        if self.request.GET.get('person') is not None:
             person = self.request.GET.get('person')
-            filter_set = filter_set.filter(person__login__icontains=person)
+            qs = qs.filter(person__login__icontains=person)
 
-        if self.request.GET.get('date'):
+        if self.request.GET.get('date') is not None:
             date = self.request.GET.get('date')
-            filter_set = filter_set.filter(start_time__icontains=date)
+            qs = qs.filter(start_time__icontains=date)
 
-        if self.request.GET.get('app'):
+        if self.request.GET.get('app') is not None:
             app = self.request.GET.get('app')
-            filter_set = filter_set.filter(app__name__icontains=app)
+            qs = qs.filter(app__name__icontains=app)
 
-        if self.request.GET.get('item'):
+        if self.request.GET.get('item') is not None:
             item = self.request.GET.get('item')
-            filter_set = filter_set.filter(item__item_type__type__icontains=item)
+            qs = qs.filter(item__item_type__type__icontains=item)
 
-        return filter_set.order_by('-start_time')
+        return qs.order_by('-start_time')
 
 
 class PersonPassageListView(ListView):

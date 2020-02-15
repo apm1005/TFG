@@ -7,7 +7,6 @@ from .views import (
     PersonPassageListView,
 )
 
-# TODO - Add passage/search, views.search/PassageSearch.as_view(), name='passage-search'
 urlpatterns = [
     path('', HomeView.as_view(), name='logscope-home'),
     path('passage/', PassageListView.as_view(), name='logscope-passage'),

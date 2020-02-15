@@ -1,6 +1,6 @@
 body {
   background: #EAEAEA;
-  color: #333333;
+  color: #000000;
   margin-top: 5rem;
 }
 
@@ -9,7 +9,7 @@ ul {
 }
 
 .bg-steel {
-  background-color: #008cff;
+  background-color: #000000;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -17,7 +17,7 @@ ul {
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #cbd5db;
+  color: #00b7ff;
 }
 
 .site-header .navbar-nav .nav-link.active {
