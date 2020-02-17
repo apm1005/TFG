@@ -1,0 +1,32 @@
+{% extends "logscope/base.html" %}
+{% block content %}
+    <div class="card border-dark">
+        <!-- Passages table -->
+        <table class="table table-bordered">
+            <thead class="card-header bg-dark text-white">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">App</th>
+                    <th scope="col">Item</th>
+                </tr>
+            </thead>
+            <tbody class="card-body">
+                {% for passage in passages %}
+                <tr>
+                    <td><a class="mr-2" href="{% url 'passage-detail' passage.id %}">{{ passage.id }}</a></td>
+                    <td><a class="mr-2" href="{% url 'person-passages' passage.person.name %}">{{ passage.person }}</a></td>
+                    <td>{{ passage.duration }}</td>
+                    <td>{{ passage.app }}</td>
+                    {% if passage.item %}
+                        <td>{{ passage.item }}</td>
+                    {% else %}
+                        <td> - </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

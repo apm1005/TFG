@@ -1,15 +1,14 @@
 {% extends "logscope/base.html" %}
 {% block content %}
     <h2 class="mb-3">Passages by {{ view.kwargs.name }} ({{ page_obj.paginator.count }})</h2>
-    <article class="media content-section">
+    <div class="card border-dark mb-3">
         <!-- Passages table -->
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Person</th>
-                    <th scope="col">Start time</th>
-                    <th scope="col">End time</th>
+                    <th scope="col">Duration</th>
                     <th scope="col">App</th>
                     <th scope="col">Item</th>
                 </tr>
@@ -19,12 +18,7 @@
                 <tr>
                     <td><a class="mr-2" href="{% url 'passage-detail' passage.id %}">{{ passage.id }}</a></td>
                     <td><a class="mr-2" href="{% url 'person-passages' passage.person.name %}">{{ passage.person }}</a></td>
-                    <td>{{ passage.start_time|date:"d-m-Y H:i:s" }}</td>
-                    {% if passage.end_time %}
-                        <td>{{ passage.end_time|date:"d-m-Y H:i:s" }}</td>
-                    {% else %}
-                        <td> - </td>
-                    {% endif %}
+                    <td>{{ passage.duration }}</td>
                     <td>{{ passage.app }}</td>
                     {% if passage.item %}
                         <td>{{ passage.item }}</td>
@@ -35,7 +29,7 @@
                 {% endfor %}
             </tbody>
         </table>
-    </article>
+    </div>
     <!-- Pagination -->
     {% if is_paginated %}
         {% if page_obj.has_previous %}

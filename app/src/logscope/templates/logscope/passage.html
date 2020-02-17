@@ -1,76 +1,50 @@
 {% extends "logscope/base.html" %}
 {% block content %}
-    <article class="media content-section">
-        <!-- Search form -->
-        <form method="GET" action="{% url 'logscope-passage' %}">
-            <div class="form-row">
-                <div class="col">
-                    <input type="text" name="person" value="{{ person }}" class="form-control" placeholder="Person">
+    <div class="card border-info">
+        <h6 class="card-header bg-primary text-white">
+            Search From
+        </h6>
+        <div class="card-body">
+            <form method="GET" action="{% url 'passage-search' %}">
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="person">Person</label>
+                        <input type="text" name="person" value="{{ person }}" class="form-control" id="person" placeholder="Person">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="app">App</label>
+                        <select type="text" name="app" value="{{ app }}" class="form-control" id="app">
+                            <option value=""></option>
+                            {% for app in apps %}
+                                <option value="{{ app.name }}">{{ app.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="item">Item</label>
+                        <input type="text" name="item" value="{{ item }}" class="form-control" id="item" placeholder="Item">
+                    </div>
                 </div>
-                <div class="col">
-                    <input type="date" name="date" value="{{ date }}" class="form-control">
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="date_gt">Date greater than</label>
+                        <input type="date" name="date_gt" value="{{ date_gt }}" class="form-control" id="date_gt">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="date_lt">Date lower than</label>
+                        <input type="date" name="date_lt" value="{{ date_lt }}" class="form-control" id="date_lt">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="hour_gt">Hour greater than</label>
+                        <input type="time" name="hour_gt" value="{{ hour_gt }}" class="form-control" id="hour_gt">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="hour_lt">Hour lower than</label>
+                        <input type="time" name="hour_lt" value="{{ hour_lt }}" class="form-control" id="hour_lt">
+                    </div>
                 </div>
-                <div class="col">
-                    <input type="text" name="app" value="{{ app }}" class="form-control" placeholder="App">
-                </div>
-                <div class="col">
-                    <input type="text" name="item" value="{{ item }}" class="form-control" placeholder="Item">
-                </div>
-                <button type="submit" class="btn btn-primary">Search</button>
-            </div>
-        </form>
-    </article>
-    <article class="media content-section">
-        <!-- Passages table -->
-        <table class="table table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Person</th>
-                    <th scope="col">Start time</th>
-                    <th scope="col">End time</th>
-                    <th scope="col">App</th>
-                    <th scope="col">Item</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for passage in passages %}
-                <tr>
-                    <td><a class="mr-2" href="{% url 'passage-detail' passage.id %}">{{ passage.id }}</a></td>
-                    <td><a class="mr-2" href="{% url 'person-passages' passage.person.name %}">{{ passage.person }}</a></td>
-                    <td>{{ passage.start_time|date:"d-m-Y H:i:s" }}</td>
-                    {% if passage.end_time %}
-                        <td>{{ passage.end_time|date:"d-m-Y H:i:s" }}</td>
-                    {% else %}
-                        <td> - </td>
-                    {% endif %}
-                    <td>{{ passage.app }}</td>
-                    {% if passage.item %}
-                        <td>{{ passage.item }}</td>
-                    {% else %}
-                        <td> - </td>
-                    {% endif %}
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </article>
-    <!-- Pagination -->
-    {% if is_paginated %}
-        {% if page_obj.has_previous %}
-            <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
-            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
-        {% endif %}
-        {% for num in page_obj.paginator.page_range %}
-            {% if page_obj.number == num %}
-                <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
-            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-                <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
-            {% endif %}
-        {% endfor %}
-        {% if page_obj.has_next %}
-            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
-            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
-        {% endif %}
-    {% endif %}
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
 {% endblock content %}

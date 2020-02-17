@@ -24,10 +24,6 @@ ul {
   font-weight: 500;
 }
 
-.content-section {
-  background: #ffffff;
-  padding: 10px 20px;
-  border: 1px solid #000000;
-  border-radius: 3px;
-  margin-bottom: 20px;
+tbody tr:hover {
+    background-color: #e6fffb;
 }

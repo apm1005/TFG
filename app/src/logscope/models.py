@@ -93,3 +93,7 @@ class Passage(models.Model):
     def __str__(self):
         return str(self.person) + ' - ' + str(self.item) + ' - ' + str(self.app) + ' - ' + str(self.start_time)\
                + ' - ' + str(self.end_time)
+
+    @property
+    def duration(self):
+        return self.end_time - self.start_time if self.end_time is not None else 'Unknown'
