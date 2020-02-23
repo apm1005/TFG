@@ -78,6 +78,9 @@ cd ~\app\src
 manage.py loaddata initial.json
 ```
 
+## DEPLOYMENT
+To deploy our project we can follow the next steps explained in [djangoproject](https://docs.djangoproject.com/en/2.2/howto/deployment/).
+
 ## TOOLS
 
 * [Trello](https://trello.com/) for task management
