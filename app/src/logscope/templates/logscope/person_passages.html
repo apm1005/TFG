@@ -2,22 +2,29 @@
 {% block content %}
     <h2 class="mb-3">Passages by {{ view.kwargs.name }} ({{ page_obj.paginator.count }})</h2>
     <div class="card border-dark mb-3">
+        <div class="col-xs-3 mb-3 mt-3 mr-3 ml-3">
+            <a href="#" type="button" class="btn btn-outline-success btn-sm float-right">Export to CSV</a>
+        </div>
+    </div>
+    <div class="card border-dark mb-3">
         <!-- Passages table -->
-        <table class="table table-bordered">
-            <thead class="thead-dark">
+        <table class="table table-bordered table-sm">
+            <thead class="card-header bg-dark text-white">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Person</th>
+                    <th scope="col">Start time</th>
                     <th scope="col">Duration</th>
                     <th scope="col">App</th>
                     <th scope="col">Item</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="card-body">
                 {% for passage in passages %}
                 <tr>
                     <td><a class="mr-2" href="{% url 'passage-detail' passage.id %}">{{ passage.id }}</a></td>
                     <td><a class="mr-2" href="{% url 'person-passages' passage.person.name %}">{{ passage.person }}</a></td>
+                    <td>{{ passage.start_time|date:"d-m-y H:i:s" }}</td>
                     <td>{{ passage.duration }}</td>
                     <td>{{ passage.app }}</td>
                     {% if passage.item %}
