@@ -34,7 +34,8 @@ class Item(models.Model):
 
 
 class Personitems(models.Model):
-    person = models.ForeignKey(Person, models.DO_NOTHING, primary_key=True)
+    id = models.AutoField(primary_key=True)
+    person = models.ForeignKey(Person, models.DO_NOTHING)
     item = models.ForeignKey(Item, models.DO_NOTHING)
 
     def __str__(self):

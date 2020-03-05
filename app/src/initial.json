@@ -35,14 +35,16 @@
     "model": "logscope.personitems",
     "pk": 1,
     "fields": {
-        "item": 1
+        "item": 1,
+        "person": 1
     }
 },
 {
     "model": "logscope.personitems",
     "pk": 2,
     "fields": {
-        "item": 1
+        "item": 1,
+        "person": 2
     }
 },
 {
