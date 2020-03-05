@@ -13,6 +13,18 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 from .mysqlconfig import DB
 
+
+# Own configurations
+# VPN directory
+VPN_DIRECTORY = "../log_examples/vpn_logs/"
+
+# Cut for logon string
+LOGON_CUT_STRING = 22
+
+# Items per page
+PAGINATION = 5
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

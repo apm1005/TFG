@@ -1,4 +1,5 @@
 from .fileManager import FileManager
+from tfgproject.settings import VPN_DIRECTORY
 import xml.etree.ElementTree as et
 import os
 
@@ -13,7 +14,7 @@ class XMLFileManager(FileManager):
         list
             a list with all the names of the XML files
         """
-        return os.listdir('..\\log_examples\\vpn_logs')
+        return os.listdir(VPN_DIRECTORY)
 
     def delete_files(self, files):
         """
@@ -25,7 +26,7 @@ class XMLFileManager(FileManager):
             all the files that have been parsed
         """
         for file in files:
-            os.remove(os.path.join('..\\log_examples\\vpn_logs', file))
+            os.remove(os.path.join(VPN_DIRECTORY, file))
 
     @staticmethod
     def get_roots(files):
@@ -37,4 +38,4 @@ class XMLFileManager(FileManager):
         files : list
             all the files that are going to be parsed
         """
-        return [et.parse(f'../log_examples/vpn_logs/{file}').getroot() for file in files]
+        return [et.parse(os.path.join(VPN_DIRECTORY, file)).getroot() for file in files]

@@ -7,6 +7,7 @@ from django.views.generic import (
 )
 from .models import App, Passage, Person
 from datetime import datetime
+from tfgproject.settings import PAGINATION
 
 
 class HomeView(TemplateView):
@@ -59,7 +60,7 @@ class PersonPassageListView(ListView):
     model = Passage
     template_name = 'logscope/person_passages.html'
     context_object_name = 'passages'
-    paginate_by = 10
+    paginate_by = PAGINATION
 
     def get_queryset(self):
         person = get_object_or_404(Person, name=self.kwargs.get('name'))
