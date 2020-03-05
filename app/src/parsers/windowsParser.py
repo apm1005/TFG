@@ -1,4 +1,5 @@
 from .parser import Parser
+from tfgproject.settings import LOGON_CUT_STRING
 from logscope.models import (
     App,
     Eventtype,
@@ -7,6 +8,7 @@ from logscope.models import (
 import os
 import numpy as np
 import locale
+import ctypes
 import datetime
 
 
@@ -51,7 +53,8 @@ class WindowsParser(Parser):
         string
             an string with the info to look for last logon
         """
-        language = locale.getdefaultlocale()[0]
+        windll = ctypes.windll.kernel32
+        language = locale.windows_locale[windll.GetUserDefaultUILanguage()]
 
         if language == 'es_ES':
             logon_string = 'Ultima'
@@ -74,7 +77,6 @@ class WindowsParser(Parser):
         users = self.__get_users()
         logons = np.empty((users.shape[0], 1), dtype=object)
         result = np.hstack((users, logons))
-        date_length = 22
         logon_string = self.__set_logon_string()
 
         for i, user in enumerate(result):
@@ -83,7 +85,7 @@ class WindowsParser(Parser):
             timestamp_logon = str(os.popen(command).read())
             if timestamp_logon != '':
                 parsed_timestamp = self._parse_timestamp(
-                    timestamp_logon[-date_length:].replace('?', '').replace('\n', ''))
+                    timestamp_logon[-LOGON_CUT_STRING:].replace('?', '').replace('\n', ''))
                 result[i, 2] = parsed_timestamp
 
         return result
