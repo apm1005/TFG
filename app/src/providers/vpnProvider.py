@@ -1,4 +1,4 @@
-from .parser import Parser
+from .provider import Provider
 from logscope.models import (
     App,
     Item,
@@ -10,7 +10,7 @@ import datetime
 import locale
 
 
-class VPNParser(Parser):
+class VPNProvider(Provider):
     """
     Class that reads logs of the VPN and stores it in the database.
     """

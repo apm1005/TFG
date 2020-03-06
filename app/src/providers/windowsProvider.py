@@ -1,4 +1,4 @@
-from .parser import Parser
+from .provider import Provider
 from tfgproject.settings import LOGON_CUT_STRING
 from logscope.models import (
     App,
@@ -21,7 +21,7 @@ class LanguageNotSupported(Exception):
         self.message = message
 
 
-class WindowsParser(Parser):
+class WindowsProvider(Provider):
     """
     Class that executes a command in Windows to extract the last login of the users
     """

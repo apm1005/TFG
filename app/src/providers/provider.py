@@ -9,12 +9,12 @@ from logscope.models import (
 )
 
 
-class Parser(ABC):
+class Provider(ABC):
     """
     Class that analyzes content from the logs of each app and provides data for the database.
     """
 
-    def parse(self):
+    def provide(self):
         """
         Template method
         """
