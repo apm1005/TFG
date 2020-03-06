@@ -7,7 +7,6 @@ from .models import (
     Item,
     Itemtype,
     Passage,
-    Personitems,
     Person,
 )
 
@@ -19,6 +18,4 @@ admin.site.register(Eventtype)
 admin.site.register(Item)
 admin.site.register(Itemtype)
 admin.site.register(Passage)
-admin.site.register(Personitems)
 admin.site.register(Person)
-
