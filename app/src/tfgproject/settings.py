@@ -15,8 +15,9 @@ from .mysqlconfig import DB
 
 
 # Own configurations
-# VPN directory
-VPN_DIRECTORY = "../log_examples/vpn_logs/"
+# VPN directories
+VPN_DIRECTORY_SRC = "../log_examples/vpn_logs/to_do/"
+VPN_DIRECTORY_DST = "../log_examples/vpn_logs/done/"
 
 # Cut for logon string
 LOGON_CUT_STRING = 22

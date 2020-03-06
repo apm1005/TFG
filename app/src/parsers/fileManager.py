@@ -19,7 +19,7 @@ class FileManager(ABC):
         pass
 
     @abstractmethod
-    def delete_files(self, files):
+    def move_files(self, files):
         """
         Deletes from the "to do" directory the files parsed
 

@@ -239,6 +239,6 @@ class VPNParser(Parser):
             for elements in root.iter():
                 for summary in elements.findall('Summary'):
                     self.__create_objects(summary)
-        self.__file_manager.delete_files(files)
+        self.__file_manager.move_files(files)
 
         locale.setlocale(locale.LC_ALL, current)
