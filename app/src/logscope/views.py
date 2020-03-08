@@ -5,7 +5,7 @@ from django.views.generic import (
     DeleteView,
     TemplateView,
 )
-from .models import App, Passage, Person
+from .models import App, Itemtype, Passage, Person
 from datetime import datetime
 from tfgproject.settings import PAGINATION
 
@@ -20,6 +20,7 @@ class PassageListView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['apps'] = App.objects.distinct()
+        context['item_brands'] = Itemtype.objects.values('brand').distinct()
         return context
 
 
@@ -51,7 +52,7 @@ class PassageSearchView(ListView):
             qs = qs.filter(app__name__icontains=self.request.GET.get('app'))
 
         if self.request.GET.get('item') != '':
-            qs = qs.filter(item__item_type__type__icontains=self.request.GET.get('item'))
+            qs = qs.filter(item__item_type__brand__icontains=self.request.GET.get('item'))
 
         return qs.order_by('-start_time')
 

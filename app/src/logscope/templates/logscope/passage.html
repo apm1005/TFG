@@ -22,7 +22,12 @@
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="item">Item</label>
-                        <input type="text" name="item" value="{{ item }}" class="form-control" id="item" placeholder="Item">
+                        <select type="text" name="item" value="{{ item }}" class="form-control" id="item">
+                            <option value=""></option>
+                            {% for brand in item_brands %}
+                                <option value="{{ brand }}">{{ brand.brand }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
                 </div>
                 <div class="form-row">
