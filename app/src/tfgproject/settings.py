@@ -14,18 +14,6 @@ import os
 from .mysqlconfig import DB
 
 
-# Own configurations
-# VPN directories
-VPN_DIRECTORY_SRC = "../log_examples/vpn_logs/to_do/"
-VPN_DIRECTORY_DST = "../log_examples/vpn_logs/done/"
-
-# Cut for logon string
-LOGON_CUT_STRING = 22
-
-# Items per page
-PAGINATION = 5
-
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -139,3 +127,15 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Own configurations
+# VPN directories
+VPN_DIRECTORY_SRC = "../log_examples/vpn_logs/to_do/"
+VPN_DIRECTORY_DST = "../log_examples/vpn_logs/done/"
+
+# Cut for logon string
+LOGON_CUT_STRING = 22
+
+# Items per page
+PAGINATION = 5
