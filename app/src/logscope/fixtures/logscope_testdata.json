@@ -1,0 +1,274 @@
+[
+{
+    "model": "logscope.person",
+    "pk": 1,
+    "fields": {
+        "name": "Usuario Anónimo Primero",
+        "login": "Usuario1"
+    }
+},
+{
+    "model": "logscope.person",
+    "pk": 2,
+    "fields": {
+        "name": "Usuario Anónimo Segundo",
+        "login": "Usuario2"
+    }
+},
+{
+    "model": "logscope.person",
+    "pk": 3,
+    "fields": {
+        "name": "Usuario Anónimo Tercero",
+        "login": "Usuario3"
+    }
+},
+{
+    "model": "logscope.person",
+    "pk": 4,
+    "fields": {
+        "name": "Usuario Anónimo Cuarto",
+        "login": "Usuario4"
+    }
+},
+{
+    "model": "logscope.person",
+    "pk": 5,
+    "fields": {
+        "name": "Usuario Anónimo Quinto",
+        "login": "Usuario5"
+    }
+},
+{
+    "model": "logscope.person",
+    "pk": 6,
+    "fields": {
+        "name": "Usuario Anónimo Sexto",
+        "login": "Usuario6"
+    }
+},
+{
+    "model": "logscope.person",
+    "pk": 7,
+    "fields": {
+        "name": "Usuario Anónimo Séptimo",
+        "login": "Usuario7"
+    }
+},
+{
+    "model": "logscope.person",
+    "pk": 8,
+    "fields": {
+        "name": "Usuario Anónimo Octavo",
+        "login": "Usuario8"
+    }
+},
+{
+    "model": "logscope.person",
+    "pk": 9,
+    "fields": {
+        "name": "Usuario Anónimo Noveno",
+        "login": "Usuario9"
+    }
+},
+{
+    "model": "logscope.person",
+    "pk": 10,
+    "fields": {
+        "name": "Adrián Pineda Miñón",
+        "login": "Adrian"
+    }
+},
+{
+    "model": "logscope.itemtype",
+    "pk": 1,
+    "fields": {
+		"type": "Computer",
+		"brand": "ASUS",
+        "model": "X541UV"
+    }
+},
+{
+    "model": "logscope.itemtype",
+    "pk": 2,
+    "fields": {
+		"type": "Computer",
+		"brand": "HP",
+        "model": "ProBook 450 G5"
+    }
+},
+{
+    "model": "logscope.itemtype",
+    "pk": 3,
+    "fields": {
+		"type": "Computer",
+		"brand": "HP",
+        "model": "ProBook 430 G5"
+    }
+},
+{
+    "model": "logscope.itemtype",
+    "pk": 4,
+    "fields": {
+		"type": "Computer",
+		"brand": "HP",
+        "model": "ProBook 450 G6"
+    }
+},
+{
+    "model": "logscope.itemtype",
+    "pk": 5,
+    "fields": {
+		"type": "Computer",
+		"brand": "HP",
+        "model": "ProBook 430 G6"
+    }
+},
+{
+    "model": "logscope.item",
+    "pk": 1,
+    "fields": {
+        "item_type": 1,
+        "ip_address": "192.168.1.34",
+        "mac_address": "91-C2-35-71-86-2B",
+		"persons": [10]
+    }
+},
+{
+    "model": "logscope.item",
+    "pk": 2,
+    "fields": {
+        "item_type": 2,
+        "ip_address": "192.168.1.33",
+        "mac_address": "92-C3-45-61-36-1B",
+		"persons": [9]
+    }
+},
+{
+    "model": "logscope.item",
+    "pk": 3,
+    "fields": {
+        "item_type": 2,
+        "ip_address": "192.168.1.32",
+        "mac_address": "11-A2-25-79-86-2F",
+		"persons": [8]
+    }
+},
+{
+    "model": "logscope.item",
+    "pk": 4,
+    "fields": {
+        "item_type": 3,
+        "ip_address": "192.168.1.31",
+        "mac_address": "71-D2-3C-74-81-2D",
+		"persons": [7]
+    }
+},
+{
+    "model": "logscope.item",
+    "pk": 5,
+    "fields": {
+        "item_type": 3,
+        "ip_address": "192.168.1.30",
+        "mac_address": "74-A2-31-D4-43-5A",
+		"persons": [6]
+    }
+},
+{
+    "model": "logscope.item",
+    "pk": 6,
+    "fields": {
+        "item_type": 4,
+        "ip_address": "192.168.1.29",
+        "mac_address": "14-2A-29-D3-13-56",
+		"persons": [5]
+    }
+},
+{
+    "model": "logscope.item",
+    "pk": 7,
+    "fields": {
+        "item_type": 4,
+        "ip_address": "192.168.1.28",
+        "mac_address": "13-78-A7-4D-55-78",
+		"persons": [4]
+    }
+},
+{
+    "model": "logscope.item",
+    "pk": 8,
+    "fields": {
+        "item_type": 5,
+        "ip_address": "192.168.1.27",
+        "mac_address": "93-58-79-D4-15-73",
+		"persons": [3]
+    }
+},
+{
+    "model": "logscope.item",
+    "pk": 9,
+    "fields": {
+        "item_type": 5,
+        "ip_address": "192.168.1.26",
+        "mac_address": "51-A2-34-68-76-9A",
+		"persons": [1,2]
+    }
+},
+{
+    "model": "logscope.eventtype",
+    "pk": "log in",
+    "fields": {
+        "description": "go through the procedures to begin use of an app"
+    }
+},
+{
+    "model": "logscope.eventtype",
+    "pk": "log out",
+    "fields": {
+        "description": "go through the procedures to conclude use of an app"
+    }
+},
+{
+    "model": "logscope.environment",
+    "pk": 1,
+    "fields": {
+		"name": "SA1",
+        "ip_address": "192.168.168.1"
+    }
+},
+{
+    "model": "logscope.environment",
+    "pk": 2,
+    "fields": {
+		"name": "SA2",
+        "ip_address": "192.168.168.2"
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 1,
+    "fields": {
+        "name": "VPN",
+        "description": "Virtual Private Network",
+        "server": 1
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 2,
+    "fields": {
+        "name": "Launcher",
+        "description": "ASTI App Launcher",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 3,
+    "fields": {
+        "name": "Windows",
+        "description": "Windows OS",
+        "server": null
+    }
+}
+]
