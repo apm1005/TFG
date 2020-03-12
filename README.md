@@ -70,13 +70,15 @@ Django provides an easy way to set some initial data with manage.py.
 First of all, you can extract the current data from your database with:
 ```cmd
 cd ~\app\src
-manage.py dumpdata --format json --indent 4 > initial.json
+manage.py dumpdata --format json --indent 4 > dataset.json
 ```
 Now you can use this json file (or one created by yourself) to import data to the database with:
 ```cmd
 cd ~\app\src
-manage.py loaddata initial.json
+manage.py loaddata logscope_testdata.json
 ```
+
+This json files are located in ~\app\src\logscope\fixtures.
 
 ## DEPLOYMENT
 To deploy our project we can follow the next steps explained in [djangoproject](https://docs.djangoproject.com/en/2.2/howto/deployment/).
