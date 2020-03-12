@@ -6,7 +6,7 @@ class Person(models.Model):
     name = models.CharField(max_length=50, blank=True, null=False)
     login = models.CharField(max_length=20, blank=True, null=False)
     company = models.CharField(max_length=50, blank=True, null=False)
-    division = models.CharField(max_length=50, blank=True, null=False)
+    division = models.CharField(max_length=50, blank=True, null=True)
     area = models.CharField(max_length=50, blank=True, null=False)
     department = models.CharField(max_length=50, blank=True, null=False)
 
