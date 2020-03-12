@@ -4,7 +4,11 @@
     "pk": 1,
     "fields": {
         "name": "Usuario Anónimo Primero",
-        "login": "Usuario1"
+        "login": "Usuario1",
+        "company": "ASTI Mobile Robotics Spain",
+        "division": "Operations",
+        "area": "Software Engineering",
+        "department": "SW Machine"
     }
 },
 {
@@ -12,7 +16,11 @@
     "pk": 2,
     "fields": {
         "name": "Usuario Anónimo Segundo",
-        "login": "Usuario2"
+        "login": "Usuario2",
+        "company": "ASTI Mobile Robotics Spain",
+        "division": "Operations",
+        "area": "Supply Chain",
+        "department": "Supply Chain"
     }
 },
 {
@@ -20,7 +28,11 @@
     "pk": 3,
     "fields": {
         "name": "Usuario Anónimo Tercero",
-        "login": "Usuario3"
+        "login": "Usuario3",
+        "company": "ASTI Mobile Robotics Spain",
+        "division": null,
+        "area": "Factory",
+        "department": "Tailored Production Line"
     }
 },
 {
@@ -28,7 +40,11 @@
     "pk": 4,
     "fields": {
         "name": "Usuario Anónimo Cuarto",
-        "login": "Usuario4"
+        "login": "Usuario4",
+        "company": "ASTI Mobile Robotics Spain",
+        "division": null,
+        "area": "Central Services",
+        "department": "Contabilidad y Administración"
     }
 },
 {
@@ -36,7 +52,11 @@
     "pk": 5,
     "fields": {
         "name": "Usuario Anónimo Quinto",
-        "login": "Usuario5"
+        "login": "Usuario5",
+        "company": "ASTI Mobile Robotics Group",
+        "division": null,
+        "area": "Central Services",
+        "department": "General Services"
     }
 },
 {
@@ -44,7 +64,11 @@
     "pk": 6,
     "fields": {
         "name": "Usuario Anónimo Sexto",
-        "login": "Usuario6"
+        "login": "Usuario6",
+        "company": "ASTI Mobile Robotics Spain",
+        "division": null,
+        "area": "Software Engineering",
+        "department": "Software de Gestión"
     }
 },
 {
@@ -52,7 +76,11 @@
     "pk": 7,
     "fields": {
         "name": "Usuario Anónimo Séptimo",
-        "login": "Usuario7"
+        "login": "Usuario7",
+        "company": "ASTI Mobile Robotics Spain",
+        "division": null,
+        "area": "Commercial Engineering",
+        "department": "Commercial Engineering"
     }
 },
 {
@@ -60,7 +88,11 @@
     "pk": 8,
     "fields": {
         "name": "Usuario Anónimo Octavo",
-        "login": "Usuario8"
+        "login": "Usuario8",
+        "company": "ASTI Mobile Robotics Spain",
+        "division": null,
+        "area": "Organizational Development",
+        "department": "SW IT"
     }
 },
 {
@@ -68,7 +100,11 @@
     "pk": 9,
     "fields": {
         "name": "Usuario Anónimo Noveno",
-        "login": "Usuario9"
+        "login": "Usuario9",
+        "company": "ASTI Mobile Robotics Group",
+        "division": null,
+        "area": "Organizational Development",
+        "department": "SW IT"
     }
 },
 {
@@ -76,7 +112,11 @@
     "pk": 10,
     "fields": {
         "name": "Adrián Pineda Miñón",
-        "login": "Adrian"
+        "login": "Adrian",
+        "company": "ASTI Mobile Robotics Group",
+        "division": null,
+        "area": "Organizational Development",
+        "department": "SW IT"
     }
 },
 {
@@ -257,6 +297,15 @@
     "model": "logscope.app",
     "pk": 2,
     "fields": {
+        "name": "Windows",
+        "description": "Windows OS",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 3,
+    "fields": {
         "name": "Launcher",
         "description": "ASTI App Launcher",
         "server": 2
@@ -264,11 +313,3208 @@
 },
 {
     "model": "logscope.app",
-    "pk": 3,
+    "pk": 4,
     "fields": {
-        "name": "Windows",
-        "description": "Windows OS",
+        "name": "Partes",
+        "description": "App for hour report",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 5,
+    "fields": {
+        "name": "Dropbox",
+        "description": "Cloud storage service",
         "server": null
     }
+},
+{
+    "model": "logscope.app",
+    "pk": 6,
+    "fields": {
+        "name": "ERP SAGE",
+        "description": "Enterprise Resource Planning",
+        "server": 1
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 7,
+    "fields": {
+        "name": "Excelencia",
+        "description": "Dropbox Excelencia",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 8,
+    "fields": {
+        "name": "Hasta La Cocina",
+        "description": "App to order food",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 9,
+    "fields": {
+        "name": "Redimne",
+        "description": "App to report project incidents",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 10,
+    "fields": {
+        "name": "Regulación de Jornada",
+        "description": "App to regulate of hour reports",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 11,
+    "fields": {
+        "name": "Salesforce",
+        "description": "Cloud app for customer relationship management",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 12,
+    "fields": {
+        "name": "Seresco",
+        "description": "Human Resources app",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 13,
+    "fields": {
+        "name": "Firma",
+        "description": "Mail signature",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 14,
+    "fields": {
+        "name": "Slack",
+        "description": "Messaging app",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 15,
+    "fields": {
+        "name": "Synergy",
+        "description": "App to manage employee data",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 16,
+    "fields": {
+        "name": "Webmail",
+        "description": "Web email system",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 17,
+    "fields": {
+        "name": "Reconociendo",
+        "description": "Reconociendo",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 1,
+    "fields": {
+        "instant": "2020-03-10T15:58:56",
+        "event_type": "log in"
+    }
+},
+{
+    "model": "logscope.event",
+    "pk": 2,
+    "fields": {
+        "instant": "2020-03-10T15:58:56",
+        "event_type": "log in"
+    }
+},
+{
+	"model": "logscope.event",
+	"pk": 3,
+	"fields": {
+		"instant": "2020-03-10T15:58:56",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 4,
+	"fields": {
+		"instant": "2020-03-10T15:58:08",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 5,
+	"fields": {
+		"instant": "2020-03-10T15:57:47",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 6,
+	"fields": {
+		"instant": "2020-03-10T15:57:29",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 7,
+	"fields": {
+		"instant": "2020-03-10T15:55:32",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 8,
+	"fields": {
+		"instant": "2020-03-10T15:53:28",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 9,
+	"fields": {
+		"instant": "2020-03-10T15:52:05",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 10,
+	"fields": {
+		"instant": "2020-03-10T15:47:11",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 11,
+	"fields": {
+		"instant": "2020-03-10T15:46:02",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 12,
+	"fields": {
+		"instant": "2020-03-10T15:41:44",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 13,
+	"fields": {
+		"instant": "2020-03-10T15:40:32",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 14,
+	"fields": {
+		"instant": "2020-03-10T15:40:23",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 15,
+	"fields": {
+		"instant": "2020-03-10T15:38:39",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 16,
+	"fields": {
+		"instant": "2020-03-10T15:33:47",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 17,
+	"fields": {
+		"instant": "2020-03-10T15:28:24",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 18,
+	"fields": {
+		"instant": "2020-03-10T15:26:17",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 19,
+	"fields": {
+		"instant": "2020-03-10T15:26:15",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 20,
+	"fields": {
+		"instant": "2020-03-10T15:23:03",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 21,
+	"fields": {
+		"instant": "2020-03-10T15:21:26",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 22,
+	"fields": {
+		"instant": "2020-03-10T15:15:09",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 23,
+	"fields": {
+		"instant": "2020-03-10T15:08:36",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 24,
+	"fields": {
+		"instant": "2020-03-10T15:08:19",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 25,
+	"fields": {
+		"instant": "2020-03-10T15:06:15",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 26,
+	"fields": {
+		"instant": "2020-03-10T15:04:30",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 27,
+	"fields": {
+		"instant": "2020-03-10T15:04:30",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 28,
+	"fields": {
+		"instant": "2020-03-10T14:53:30",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 29,
+	"fields": {
+		"instant": "2020-03-10T14:46:12",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 30,
+	"fields": {
+		"instant": "2020-03-10T14:34:29",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 31,
+	"fields": {
+		"instant": "2020-03-10T14:33:51",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 32,
+	"fields": {
+		"instant": "2020-03-10T14:27:38",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 33,
+	"fields": {
+		"instant": "2020-03-10T14:21:42",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 34,
+	"fields": {
+		"instant": "2020-03-10T14:21:09",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 35,
+	"fields": {
+		"instant": "2020-03-10T14:20:53",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 36,
+	"fields": {
+		"instant": "2020-03-10T14:20:16",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 37,
+	"fields": {
+		"instant": "2020-03-10T14:14:41",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 38,
+	"fields": {
+		"instant": "2020-03-10T14:03:30",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 39,
+	"fields": {
+		"instant": "2020-03-10T13:51:51",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 40,
+	"fields": {
+		"instant": "2020-03-10T13:50:56",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 41,
+	"fields": {
+		"instant": "2020-03-10T13:50:25",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 42,
+	"fields": {
+		"instant": "2020-03-10T13:48:56",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 43,
+	"fields": {
+		"instant": "2020-03-10T13:38:22",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 44,
+	"fields": {
+		"instant": "2020-03-10T13:28:46",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 45,
+	"fields": {
+		"instant": "2020-03-10T13:24:57",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 46,
+	"fields": {
+		"instant": "2020-03-10T13:23:16",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 47,
+	"fields": {
+		"instant": "2020-03-10T13:22:51",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 48,
+	"fields": {
+		"instant": "2020-03-10T13:22:39",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 49,
+	"fields": {
+		"instant": "2020-03-10T13:21:31",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 50,
+	"fields": {
+		"instant": "2020-03-10T13:17:51",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 51,
+	"fields": {
+		"instant": "2020-03-10T13:16:40",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 52,
+	"fields": {
+		"instant": "2020-03-10T13:13:38",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 53,
+	"fields": {
+		"instant": "2020-03-10T13:09:25",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 54,
+	"fields": {
+		"instant": "2020-03-10T13:07:04",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 55,
+	"fields": {
+		"instant": "2020-03-10T13:06:55",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 56,
+	"fields": {
+		"instant": "2020-03-10T13:02:33",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 57,
+	"fields": {
+		"instant": "2020-03-10T12:59:51",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 58,
+	"fields": {
+		"instant": "2020-03-10T12:49:04",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 59,
+	"fields": {
+		"instant": "2020-03-10T12:36:19",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 60,
+	"fields": {
+		"instant": "2020-03-10T12:35:12",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 61,
+	"fields": {
+		"instant": "2020-03-10T12:31:09",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 62,
+	"fields": {
+		"instant": "2020-03-10T12:28:09",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 63,
+	"fields": {
+		"instant": "2020-03-10T12:19:39",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 64,
+	"fields": {
+		"instant": "2020-03-10T12:09:37",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 65,
+	"fields": {
+		"instant": "2020-02-03T10:19:35",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 66,
+	"fields": {
+		"instant": "2020-02-03T10:19:23",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 67,
+	"fields": {
+		"instant": "2020-02-03T10:19:20",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 68,
+	"fields": {
+		"instant": "2020-02-03T10:15:58",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 69,
+	"fields": {
+		"instant": "2020-02-03T10:11:30",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 70,
+	"fields": {
+		"instant": "2020-02-03T10:09:19",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 71,
+	"fields": {
+		"instant": "2020-02-03T10:08:50",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 72,
+	"fields": {
+		"instant": "2020-02-03T10:08:10",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 73,
+	"fields": {
+		"instant": "2020-02-03T10:07:16",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 74,
+	"fields": {
+		"instant": "2020-02-03T10:04:56",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 75,
+	"fields": {
+		"instant": "2020-02-03T10:04:43",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 76,
+	"fields": {
+		"instant": "2020-02-03T10:03:46",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 77,
+	"fields": {
+		"instant": "2020-02-03T10:03:29",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 78,
+	"fields": {
+		"instant": "2020-02-03T10:03:03",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 79,
+	"fields": {
+		"instant": "2020-02-03T09:57:18",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 80,
+	"fields": {
+		"instant": "2020-02-03T09:51:54",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 81,
+	"fields": {
+		"instant": "2020-02-03T09:51:05",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 82,
+	"fields": {
+		"instant": "2020-02-03T09:49:46",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 83,
+	"fields": {
+		"instant": "2020-02-03T09:46:56",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 84,
+	"fields": {
+		"instant": "2020-02-03T09:45:20",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 85,
+	"fields": {
+		"instant": "2020-02-03T09:45:20",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 86,
+	"fields": {
+		"instant": "2020-02-03T09:45:03",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 87,
+	"fields": {
+		"instant": "2020-02-03T09:37:50",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 88,
+	"fields": {
+		"instant": "2020-02-03T09:36:32",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 89,
+	"fields": {
+		"instant": "2020-02-03T09:36:19",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 90,
+	"fields": {
+		"instant": "2020-02-03T09:34:56",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 91,
+	"fields": {
+		"instant": "2020-02-03T09:34:35",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 92,
+	"fields": {
+		"instant": "2020-02-03T09:32:13",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 93,
+	"fields": {
+		"instant": "2020-02-03T09:30:52",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 94,
+	"fields": {
+		"instant": "2020-02-03T09:30:10",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 95,
+	"fields": {
+		"instant": "2020-02-03T09:28:40",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 96,
+	"fields": {
+		"instant": "2020-02-03T09:27:45",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 97,
+	"fields": {
+		"instant": "2020-02-03T09:27:33",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 98,
+	"fields": {
+		"instant": "2020-02-03T09:25:45",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 99,
+	"fields": {
+		"instant": "2020-02-03T09:24:46",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 100,
+	"fields": {
+		"instant": "2020-02-03T09:23:42",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 101,
+	"fields": {
+		"instant": "2020-02-03T09:23:24",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 102,
+	"fields": {
+		"instant": "2020-02-03T09:22:47",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 103,
+	"fields": {
+		"instant": "2020-03-10T16:04:41",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 104,
+	"fields": {
+		"instant": "2020-03-10T16:02:40",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 105,
+	"fields": {
+		"instant": "2020-03-10T15:57:30",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk":	106,
+	"fields": {
+		"instant": "2020-03-10T15:55:33",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 107,
+	"fields": {
+		"instant": "2020-03-10T15:55:07",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 108,
+	"fields": {
+		"instant": "2020-03-10T15:53:29",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 109,
+	"fields": {
+		"instant": "2020-03-10T15:40:37",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 110,
+	"fields": {
+		"instant": "2020-03-10T15:33:50",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 111,
+	"fields": {
+		"instant": "2020-03-10T15:28:28",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 112,
+	"fields": {
+		"instant": "2020-03-10T15:26:33",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 113,
+	"fields": {
+		"instant": "2020-03-10T15:26:24",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 114,
+	"fields": {
+		"instant": "2020-03-10T15:26:21",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 115,
+	"fields": {
+		"instant": "2020-03-10T15:26:17",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 116,
+	"fields": {
+		"instant": "2020-03-10T15:23:05",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 117,
+	"fields": {
+		"instant": "2020-03-10T15:09:16",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 118,
+	"fields": {
+		"instant": "2020-03-10T15:08:36",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 119,
+	"fields": {
+		"instant": "2020-03-10T15:04:30",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 120,
+	"fields": {
+		"instant": "2020-03-10T15:00:16",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 121,
+	"fields": {
+		"instant": "2020-03-10T14:53:34",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 122,
+	"fields": {
+		"instant": "2020-03-10T14:46:14",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 123,
+	"fields": {
+		"instant": "2020-03-10T14:34:31",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 124,
+	"fields": {
+		"instant": "2020-03-10T14:33:52",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 125,
+	"fields": {
+		"instant": "2020-03-10T14:27:40",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 126,
+	"fields": {
+		"instant": "2020-03-10T14:21:09",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 127,
+	"fields": {
+		"instant": "2020-03-10T14:20:38",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 128,
+	"fields": {
+		"instant": "2020-03-10T14:20:19",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 129,
+	"fields": {
+		"instant": "2020-03-10T14:16:00",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 130,
+	"fields": {
+		"instant": "2020-03-10T14:14:42",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 131,
+	"fields": {
+		"instant": "2020-03-10T13:54:08",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 132,
+	"fields": {
+		"instant": "2020-03-10T13:53:34",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 133,
+	"fields": {
+		"instant": "2020-03-10T13:53:21",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 134,
+	"fields": {
+		"instant": "2020-03-10T13:38:23",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 135,
+	"fields": {
+		"instant": "2020-03-10T13:38:01",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 136,
+	"fields": {
+		"instant": "2020-03-10T13:27:00",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 137,
+	"fields": {
+		"instant": "2020-03-10T13:22:59",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 138,
+	"fields": {
+		"instant": "2020-03-10T13:17:04",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 139,
+	"fields": {
+		"instant": "2020-03-10T13:09:36",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 140,
+	"fields": {
+		"instant": "2020-03-10T13:07:19",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 141,
+	"fields": {
+		"instant": "2020-03-10T13:06:57",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 142,
+	"fields": {
+		"instant": "2020-03-10T13:02:44",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 143,
+	"fields": {
+		"instant": "2020-03-10T13:02:34",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 144,
+	"fields": {
+		"instant": "2020-03-10T12:59:53",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 145,
+	"fields": {
+		"instant": "2020-03-10T12:59:29",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 146,
+	"fields": {
+		"instant": "2020-03-10T12:43:26",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 147,
+	"fields": {
+		"instant": "2020-03-10T12:42:32",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 148,
+	"fields": {
+		"instant": "2020-03-10T12:36:21",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 149,
+	"fields": {
+		"instant": "2020-03-10T12:32:16",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 150,
+	"fields": {
+		"instant": "2020-03-10T12:28:13",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 151,
+	"fields": {
+		"instant": "2020-03-10T12:20:11",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 152,
+	"fields": {
+		"instant": "2020-03-10T12:20:01",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 153,
+	"fields": {
+		"instant": "2020-03-10T12:10:09",
+		"event_type": "log in"
+	}
+},
+{
+	"model": "logscope.event",
+	"pk": 154,
+	"fields": {
+		"instant": "2020-03-10T12:09:47",
+		"event_type": "log in"
+	}
+},
+{
+    "model": "logscope.passage",
+    "pk": 1,
+    "fields": {
+		"event": 1,
+		"app": 3,
+		"person": 1,
+		"item": null,
+        "start_time": "2020-03-10T15:58:56",
+        "end_time": null
+    }
+},
+{
+    "model": "logscope.passage",
+    "pk": 2,
+    "fields": {
+		"event": 2,
+		"app": 3,
+		"person": 1,
+		"item": null,
+        "start_time": "2020-03-10T15:58:56",
+        "end_time": null
+    }
+},
+{
+	"model": "logscope.passage",
+	"pk": 3,
+	"fields": {
+		"event": 3,
+		"app": 3,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10T15:58:56",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 4,
+	"fields": {
+		"event": 4,
+		"app": 3,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10T15:58:08",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 5,
+	"fields": {
+		"event": 5,
+		"app": 3,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10T15:57:47",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 6,
+	"fields": {
+		"event": 6,
+		"app": 3,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10T15:57:29",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 7,
+	"fields": {
+		"event": 7,
+		"app": 3,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10T15:55:32",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 8,
+	"fields": {
+		"event": 8,
+		"app": 3,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10T15:53:28",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 9,
+	"fields": {
+		"event": 9,
+		"app": 3,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10T15:52:05",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 10,
+	"fields": {
+		"event": 10,
+		"app": 3,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10T15:47:11",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 11,
+	"fields": {
+		"event": 11,
+		"app": 3,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10T15:46:02",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 12,
+	"fields": {
+		"event": 12,
+		"app": 3,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10T15:41:44",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 13,
+	"fields": {
+		"event": 13,
+		"app": 3,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10T15:40:32",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 14,
+	"fields": {
+		"event": 14,
+		"app": 3,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10T15:40:23",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 15,
+	"fields": {
+		"event": 15,
+		"app": 3,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10T15:38:39",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 16,
+	"fields": {
+		"event": 16,
+		"app": 3,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10T15:33:47",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 17,
+	"fields": {
+		"event": 17,
+		"app": 3,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10T15:28:24",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 18,
+	"fields": {
+		"event": 18,
+		"app": 3,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10T15:26:17",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 19,
+	"fields": {
+		"event": 19,
+		"app": 3,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10T15:26:15",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 20,
+	"fields": {
+		"event": 20,
+		"app": 3,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10T15:23:03",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 21,
+	"fields": {
+		"event": 21,
+		"app": 3,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10T15:21:26",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 22,
+	"fields": {
+		"event": 22,
+		"app": 3,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10T15:15:09",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 23,
+	"fields": {
+		"event": 23,
+		"app": 3,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10T15:08:36",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 24,
+	"fields": {
+		"event": 24,
+		"app": 3,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10T15:08:19",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 25,
+	"fields": {
+		"event": 25,
+		"app": 3,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10T15:06:15",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 26,
+	"fields": {
+		"event": 26,
+		"app": 3,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10T15:04:30",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 27,
+	"fields": {
+		"event": 27,
+		"app": 3,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10T15:04:30",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 28,
+	"fields": {
+		"event": 28,
+		"app": 3,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10T14:53:30",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 29,
+	"fields": {
+		"event": 29,
+		"app": 3,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10T14:46:12",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 30,
+	"fields": {
+		"event": 30,
+		"app": 3,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10T14:34:29",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 31,
+	"fields": {
+		"event": 31,
+		"app": 3,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10T14:33:51",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 32,
+	"fields": {
+		"event": 32,
+		"app": 3,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10T14:27:38",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 33,
+	"fields": {
+		"event": 33,
+		"app": 3,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10T14:21:42",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 34,
+	"fields": {
+		"event": 34,
+		"app": 3,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10T14:21:09",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 35,
+	"fields": {
+		"event": 35,
+		"app": 3,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10T14:20:53",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 36,
+	"fields": {
+		"event": 36,
+		"app": 3,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10T14:20:16",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 37,
+	"fields": {
+		"event": 37,
+		"app": 3,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10T14:14:41",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 38,
+	"fields": {
+		"event": 38,
+		"app": 3,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10T14:03:30",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 39,
+	"fields": {
+		"event": 39,
+		"app": 3,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10T13:51:51",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 40,
+	"fields": {
+		"event": 40,
+		"app": 3,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10T13:50:56",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 41,
+	"fields": {
+		"event": 41,
+		"app": 3,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10T13:50:25",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 42,
+	"fields": {
+		"event": 42,
+		"app": 3,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10T13:48:56",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 43,
+	"fields": {
+		"event": 43,
+		"app": 3,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10T13:38:22",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 44,
+	"fields": {
+		"event": 44,
+		"app": 3,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10T13:28:46",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 45,
+	"fields": {
+		"event": 45,
+		"app": 3,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10T13:24:57",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 46,
+	"fields": {
+		"event": 46,
+		"app": 3,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10T13:23:16",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 47,
+	"fields": {
+		"event": 47,
+		"app": 3,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10T13:22:51",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 48,
+	"fields": {
+		"event": 48,
+		"app": 3,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10T13:22:39",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 49,
+	"fields": {
+		"event": 49,
+		"app": 3,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10T13:21:31",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 50,
+	"fields": {
+		"event": 50,
+		"app": 3,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10T13:17:51",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 51,
+	"fields": {
+		"event": 51,
+		"app": 3,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10T13:16:40",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 52,
+	"fields": {
+		"event": 52,
+		"app": 3,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10T13:13:38",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 53,
+	"fields": {
+		"event": 53,
+		"app": 3,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10T13:09:25",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 54,
+	"fields": {
+		"event": 54,
+		"app": 3,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10T13:07:04",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 55,
+	"fields": {
+		"event": 55,
+		"app": 3,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10T13:06:55",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 56,
+	"fields": {
+		"event": 56,
+		"app": 3,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10T13:02:33",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 57,
+	"fields": {
+		"event": 57,
+		"app": 3,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10T12:59:51",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 58,
+	"fields": {
+		"event": 58,
+		"app": 3,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10T12:49:04",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 59,
+	"fields": {
+		"event": 59,
+		"app": 3,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10T12:36:19",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 60,
+	"fields": {
+		"event": 60,
+		"app": 3,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-03-10T12:35:12",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 61,
+	"fields": {
+		"event": 61,
+		"app": 3,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-03-10T12:31:09",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 62,
+	"fields": {
+		"event": 62,
+		"app": 3,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-03-10T12:28:09",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 63,
+	"fields": {
+		"event": 63,
+		"app": 4,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-03-10T12:19:39",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 64,
+	"fields": {
+		"event": 64,
+		"app": 4,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-03-10T12:09:37",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 65,
+	"fields": {
+		"event": 65,
+		"app": 4,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-02-03T10:19:35",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 66,
+	"fields": {
+		"event": 66,
+		"app": 3,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-02-03T10:19:23",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 67,
+	"fields": {
+		"event": 67,
+		"app": 4,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-02-03T10:19:20",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 68,
+	"fields": {
+		"event": 68,
+		"app": 4,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-02-03T10:15:58",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 69,
+	"fields": {
+		"event": 69,
+		"app": 4,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-02-03T10:11:30",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 70,
+	"fields": {
+		"event": 70,
+		"app": 4,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-02-03T10:09:19",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 71,
+	"fields": {
+		"event": 71,
+		"app": 4,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-02-03T10:08:50",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 72,
+	"fields": {
+		"event": 72,
+		"app": 4,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-02-03T10:08:10",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 73,
+	"fields": {
+		"event": 73,
+		"app": 4,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-02-03T10:07:16",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 74,
+	"fields": {
+		"event": 74,
+		"app": 4,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-02-03T10:04:56",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 75,
+	"fields": {
+		"event": 75,
+		"app": 4,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-02-03T10:04:43",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 76,
+	"fields": {
+		"event": 76,
+		"app": 4,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-02-03T10:03:46",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 77,
+	"fields": {
+		"event": 77,
+		"app": 4,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-02-03T10:03:29",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 78,
+	"fields": {
+		"event": 78,
+		"app": 4,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-02-03T10:03:03",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 79,
+	"fields": {
+		"event": 79,
+		"app": 4,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-02-03T09:57:18",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 80,
+	"fields": {
+		"event": 80,
+		"app": 4,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-02-03T09:51:54",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 81,
+	"fields": {
+		"event": 81,
+		"app": 4,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-02-03T09:51:05",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 82,
+	"fields": {
+		"event": 82,
+		"app": 4,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-02-03T09:49:46",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 83,
+	"fields": {
+		"event": 83,
+		"app": 4,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-02-03T09:46:56",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 84,
+	"fields": {
+		"event": 84,
+		"app": 3,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-02-03T09:45:20",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 85,
+	"fields": {
+		"event": 85,
+		"app": 4,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-02-03T09:45:20",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 86,
+	"fields": {
+		"event": 86,
+		"app": 4,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-02-03T09:45:03",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 87,
+	"fields": {
+		"event": 87,
+		"app": 4,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-02-03T09:37:50",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 88,
+	"fields": {
+		"event": 88,
+		"app": 4,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-02-03T09:36:32",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 89,
+	"fields": {
+		"event": 89,
+		"app": 4,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-02-03T09:36:19",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 90,
+	"fields": {
+		"event": 90,
+		"app": 4,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-02-03T09:34:56",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 91,
+	"fields": {
+		"event": 91,
+		"app": 4,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-02-03T09:34:35",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 92,
+	"fields": {
+		"event": 92,
+		"app": 3,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-02-03T09:32:13",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 93,
+	"fields": {
+		"event": 93,
+		"app": 3,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-02-03T09:30:52",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 94,
+	"fields": {
+		"event": 94,
+		"app": 4,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-02-03T09:30:10",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 95,
+	"fields": {
+		"event": 95,
+		"app": 4,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-02-03T09:28:40",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 96,
+	"fields": {
+		"event": 96,
+		"app": 4,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-02-03T09:27:45",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 97,
+	"fields": {
+		"event": 97,
+		"app": 4,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-02-03T09:27:33",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 98,
+	"fields": {
+		"event": 98,
+		"app": 3,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-02-03T09:25:45",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 99,
+	"fields": {
+		"event": 99,
+		"app": 4,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-02-03T09:24:46",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 100,
+	"fields": {
+		"event": 100,
+		"app": 4,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-02-03T09:23:42",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 101,
+	"fields": {
+		"event": 101,
+		"app": 4,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-02-03T09:23:24",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 102,
+	"fields": {
+		"event": 102,
+		"app": 4,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-02-03T09:22:47",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 103,
+	"fields": {
+		"event": 103,
+		"app": 6,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10 16:04:41",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 104,
+	"fields": {
+		"event": 104,
+		"app": 6,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10 16:02:40",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 105,
+	"fields": {
+		"event": 105,
+		"app": 6,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10 15:57:30",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 106,
+	"fields": {
+		"event": 106,
+		"app": 6,
+		"person": 1,
+		"item": null,
+		"start_time": "2020-03-10 15:55:33",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 107,
+	"fields": {
+		"event": 107,
+		"app": 6,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10 15:55:07",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 108,
+	"fields": {
+		"event": 108,
+		"app": 9,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10 15:53:29",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 109,
+	"fields": {
+		"event": 109,
+		"app": 6,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10 15:40:37",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 110,
+	"fields": {
+		"event": 110,
+		"app": 9,
+		"person": 2,
+		"item": null,
+		"start_time": "2020-03-10 15:33:50",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 111,
+	"fields": {
+		"event": 111,
+		"app": 17,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10 15:28:28",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 112,
+	"fields": {
+		"event": 112,
+		"app": 9,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10 15:26:33",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 113,
+	"fields": {
+		"event": 113,
+		"app": 7,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10 15:26:24",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 114,
+	"fields": {
+		"event": 114,
+		"app": 6,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10 15:26:21",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 115,
+	"fields": {
+		"event": 115,
+		"app": 9,
+		"person": 3,
+		"item": null,
+		"start_time": "2020-03-10 15:26:17",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 116,
+	"fields": {
+		"event": 116,
+		"app": 11,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10 15:23:05",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 117,
+	"fields": {
+		"event": 117,
+		"app": 17,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10 15:09:16",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 118,
+	"fields": {
+		"event": 118,
+		"app": 17,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10 15:08:36",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 119,
+	"fields": {
+		"event": 119,
+		"app": 5,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10 15:04:30",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 120,
+	"fields": {
+		"event": 120,
+		"app": 6,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10 15:00:16",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 121,
+	"fields": {
+		"event": 121,
+		"app": 14,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10 14:53:34",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 122,
+	"fields": {
+		"event": 122,
+		"app": 9,
+		"person": 4,
+		"item": null,
+		"start_time": "2020-03-10 14:46:14",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 123,
+	"fields": {
+		"event": 123,
+		"app": 6,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10 14:34:31",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 124,
+	"fields": {
+		"event": 124,
+		"app": 9,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10 14:33:52",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 125,
+	"fields": {
+		"event": 125,
+		"app": 6,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10 14:27:40",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 126,
+	"fields": {
+		"event": 126,
+		"app": 15,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10 14:21:09",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 127,
+	"fields": {
+		"event": 127,
+		"app": 16,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10 14:20:38",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 128,
+	"fields": {
+		"event": 128,
+		"app": 14,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10 14:20:19",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 129,
+	"fields": {
+		"event": 129,
+		"app": 6,
+		"person": 5,
+		"item": null,
+		"start_time": "2020-03-10 14:16:00",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 130,
+	"fields": {
+		"event": 130,
+		"app": 6,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10 14:14:42",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 131,
+	"fields": {
+		"event": 131,
+		"app": 8,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10 13:54:08",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 132,
+	"fields": {
+		"event": 132,
+		"app": 9,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10 13:53:34",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 133,
+	"fields": {
+		"event": 133,
+		"app": 8,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10 13:53:21",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 134,
+	"fields": {
+		"event": 134,
+		"app": 6,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10 13:38:23",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 135,
+	"fields": {
+		"event": 135,
+		"app": 17,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10 13:38:01",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 136,
+	"fields": {
+		"event": 136,
+		"app": 6,
+		"person": 6,
+		"item": null,
+		"start_time": "2020-03-10 13:27:00",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 137,
+	"fields": {
+		"event": 137,
+		"app": 17,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-03-10 13:22:59",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 138,
+	"fields": {
+		"event": 138,
+		"app": 5,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-03-10 13:17:04",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 139,
+	"fields": {
+		"event": 139,
+		"app": 15,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-03-10 13:09:36",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 140,
+	"fields": {
+		"event": 140,
+		"app": 10,
+		"person": 7,
+		"item": null,
+		"start_time": "2020-03-10 13:07:19",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 141,
+	"fields": {
+		"event": 141,
+		"app": 17,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-03-10 13:06:57",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 142,
+	"fields": {
+		"event": 142,
+		"app": 12,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-03-10 13:02:44",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 143,
+	"fields": {
+		"event": 143,
+		"app": 6,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-03-10 13:02:34",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 144,
+	"fields": {
+		"event": 144,
+		"app": 17,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-03-10 12:59:53",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 145,
+	"fields": {
+		"event": 145,
+		"app": 6,
+		"person": 8,
+		"item": null,
+		"start_time": "2020-03-10 12:59:29",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 146,
+	"fields": {
+		"event": 146,
+		"app": 6,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-03-10 12:43:26",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 147,
+	"fields": {
+		"event": 147,
+		"app": 9,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-03-10 12:42:32",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 148,
+	"fields": {
+		"event": 148,
+		"app": 9,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-03-10 12:36:21",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 149,
+	"fields": {
+		"event": 149,
+		"app": 17,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-03-10 12:32:16",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 150,
+	"fields": {
+		"event": 150,
+		"app": 17,
+		"person": 9,
+		"item": null,
+		"start_time": "2020-03-10 12:28:13",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 151,
+	"fields": {
+		"event": 151,
+		"app": 5,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-03-10 12:20:11",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 152,
+	"fields": {
+		"event": 152,
+		"app": 9,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-03-10 12:20:01",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 153,
+	"fields": {
+		"event": 153,
+		"app": 12,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-03-10 12:10:09",
+		"end_time": null
+	}
+},
+{
+	"model": "logscope.passage",
+	"pk": 154,
+	"fields": {
+		"event": 154,
+		"app": 13,
+		"person": 10,
+		"item": null,
+		"start_time": "2020-03-10 12:09:47",
+		"end_time": null
+	}
 }
 ]
