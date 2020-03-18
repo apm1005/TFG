@@ -97,3 +97,6 @@ class Passage(models.Model):
     @property
     def duration(self):
         return self.end_time - self.start_time if self.end_time is not None else 'Unknown'
+
+    class Meta:
+        ordering = ('-start_time', )

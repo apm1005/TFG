@@ -35,6 +35,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # own
     'logscope.apps.LogscopeConfig',
+    'django_filters',
+    'django_tables2',
+    'bootstrapform',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -138,4 +141,4 @@ VPN_DIRECTORY_DST = "../log_examples/vpn_logs/done/"
 LOGON_CUT_STRING = 22
 
 # Items per page
-PAGINATION = 5
+PAGINATION = 10
