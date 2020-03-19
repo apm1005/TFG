@@ -23,3 +23,9 @@ class PassageTableView(SingleTableMixin, FilterView):
 
 class HomeView(TemplateView):
     template_name = 'logscope/home.html'
+
+
+class PassageTableExport(SingleTableMixin):
+    model = Passage
+    table_class = PassageTable
+    template_name = 'django_tables2/bootstrap4.html'
