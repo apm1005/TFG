@@ -1,5 +1,6 @@
 {% extends "logscope/base.html" %}
 {% load render_table from django_tables2 %}
+{% load export_url from django_tables2 %}
 {% load bootstrap %}
 
 {% block content %}
@@ -42,7 +43,18 @@
             </div>
         </div>
     </form>
-    <div class="card border-info mt-3 mb-3">
+
+    <div class="dropdown">
+        <button class="btn btn-success btn-sm dropdown-toggle mt-4 mb-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Export formats
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a href="{% export_url 'csv' %}" class="dropdown-item">.CSV</a>
+            <a href="{% export_url 'json' %}" class="dropdown-item">.JSON</a>
+        </div>
+    </div>
+
+    <div class="card border-info mb-3">
         {% render_table table %}
         <a class="mb-3"></a>
     </div>
