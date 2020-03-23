@@ -139,6 +139,3 @@ VPN_DIRECTORY_DST = "../log_examples/vpn_logs/done/"
 
 # Cut for logon string
 LOGON_CUT_STRING = 22
-
-# Items per page
-PAGINATION = 10
