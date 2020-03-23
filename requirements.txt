@@ -1,6 +1,7 @@
 django==2.2.6
 django-filter==2.2.0
 django-tables2==2.2.1
+tablib==1.1.0
 django-bootstrap-form==3.4
 mysqlclient==1.4.5
 numpy==1.17.3
