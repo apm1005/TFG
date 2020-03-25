@@ -3,7 +3,7 @@ from django.db import models
 
 class Person(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=50, blank=True, null=False)
+    name = models.CharField(max_length=50, blank=True, null=False, verbose_name='Person name')
     login = models.CharField(max_length=20, blank=True, null=False)
     company = models.CharField(max_length=50, blank=True, null=False)
     division = models.CharField(max_length=50, blank=True, null=True)
@@ -26,12 +26,13 @@ class Itemtype(models.Model):
     model = models.CharField(max_length=50, blank=True, null=False)
 
     def __str__(self):
-        return str(self.type) + ' | ' + str(self.brand) + ' ' + str(self.model)
+        return str(self.brand) + ' ' + str(self.model)
 
 
 class Item(models.Model):
     id = models.AutoField(primary_key=True)
-    item_type = models.ForeignKey(Itemtype, models.DO_NOTHING, db_column='item_type', blank=True, null=True)
+    item_type = models.ForeignKey(Itemtype, models.DO_NOTHING, db_column='item_type', blank=True, null=True,
+                                  verbose_name='Item')
     ip_address = models.CharField(max_length=17, blank=True, null=True)
     mac_address = models.CharField(max_length=20, blank=True, null=True)
     persons = models.ManyToManyField(Person)
@@ -73,7 +74,7 @@ class Environment(models.Model):
 
 class App(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=50, blank=True, null=False)
+    name = models.CharField(max_length=50, blank=True, null=False, verbose_name='App name')
     description = models.CharField(max_length=100, blank=True, null=True)
     server = models.ForeignKey(Environment, models.DO_NOTHING, db_column='server', blank=True, null=True)
 
@@ -96,7 +97,7 @@ class Passage(models.Model):
 
     @property
     def duration(self):
-        return self.end_time - self.start_time if self.end_time is not None else 'Unknown'
+        return self.end_time - self.start_time if self.end_time is not None else None
 
     class Meta:
         ordering = ('-start_time', )
