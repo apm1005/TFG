@@ -121,7 +121,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = False
 
@@ -139,3 +139,6 @@ VPN_DIRECTORY_DST = "../log_examples/vpn_logs/done/"
 
 # Cut for logon string
 LOGON_CUT_STRING = 22
+
+# Datetime format
+SHORT_DATETIME_FORMAT = 'd-m-Y H:i:s'
