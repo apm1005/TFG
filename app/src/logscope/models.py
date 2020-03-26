@@ -3,7 +3,7 @@ from django.db import models
 
 class Person(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=50, blank=True, null=False, verbose_name='Person name')
+    name = models.CharField(max_length=50, blank=True, null=False, verbose_name='Person')
     login = models.CharField(max_length=20, blank=True, null=False)
     company = models.CharField(max_length=50, blank=True, null=False)
     division = models.CharField(max_length=50, blank=True, null=True)
@@ -74,7 +74,7 @@ class Environment(models.Model):
 
 class App(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=50, blank=True, null=False, verbose_name='App name')
+    name = models.CharField(max_length=50, blank=True, null=False, verbose_name='App')
     description = models.CharField(max_length=100, blank=True, null=True)
     server = models.ForeignKey(Environment, models.DO_NOTHING, db_column='server', blank=True, null=True)
 

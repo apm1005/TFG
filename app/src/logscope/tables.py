@@ -6,4 +6,12 @@ class PassageTable(Table):
     class Meta:
         model = Passage
         template_name = 'django_tables2/bootstrap4.html'
-        fields = ('id', 'person__name', 'person__area', 'app__name', 'start_time', 'duration', 'item__item_type')
+        fields = ('id',
+                  'person__name',
+                  'person__company',
+                  'person__area',
+                  'person__department',
+                  'app__name',
+                  'start_time',
+                  'duration',
+                  'item__item_type')
