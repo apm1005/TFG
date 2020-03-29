@@ -70,7 +70,7 @@
 				<Usuario>Usuario2@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:20:10</Duración>
+				<Duración>01:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario2</Mensaje>
 			</Summary>
@@ -90,7 +90,7 @@
 				<Usuario>Usuario3@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:00:10</Duración>
+				<Duración>01:00:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario3</Mensaje>
 			</Summary>
@@ -110,7 +110,7 @@
 				<Usuario>Usuario4@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:20:40</Duración>
+				<Duración>02:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario4</Mensaje>
 			</Summary>
@@ -130,7 +130,7 @@
 				<Usuario>Usuario5@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:20:40</Duración>
+				<Duración>02:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario5</Mensaje>
 			</Summary>
@@ -150,7 +150,7 @@
 				<Usuario>Usuario6@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:05:07</Duración>
+				<Duración>02:05:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario6</Mensaje>
 			</Summary>
@@ -170,7 +170,7 @@
 				<Usuario>Usuario7@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>03:00:04</Duración>
+				<Duración>03:00:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario7</Mensaje>
 			</Summary>
@@ -190,7 +190,7 @@
 				<Usuario>Usuario8@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>00:45:04</Duración>
+				<Duración>00:45:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario8</Mensaje>
 			</Summary>
@@ -210,7 +210,7 @@
 				<Usuario>Usuario9@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:45:04</Duración>
+				<Duración>01:45:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario9</Mensaje>
 			</Summary>
@@ -230,7 +230,7 @@
 				<Usuario>Adrian@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:25:21</Duración>
+				<Duración>02:25:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Adrian</Mensaje>
 			</Summary>
@@ -270,7 +270,7 @@
 				<Usuario>Usuario2@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:20:10</Duración>
+				<Duración>01:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario2</Mensaje>
 			</Summary>
@@ -290,7 +290,7 @@
 				<Usuario>Usuario3@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:00:10</Duración>
+				<Duración>01:00:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario3</Mensaje>
 			</Summary>
@@ -310,7 +310,7 @@
 				<Usuario>Usuario4@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:20:40</Duración>
+				<Duración>02:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario4</Mensaje>
 			</Summary>
@@ -330,7 +330,7 @@
 				<Usuario>Usuario5@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:20:40</Duración>
+				<Duración>02:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario5</Mensaje>
 			</Summary>
@@ -350,7 +350,7 @@
 				<Usuario>Usuario6@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:05:07</Duración>
+				<Duración>02:05:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario6</Mensaje>
 			</Summary>
@@ -370,7 +370,7 @@
 				<Usuario>Usuario7@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>03:00:04</Duración>
+				<Duración>03:00:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario7</Mensaje>
 			</Summary>
@@ -390,7 +390,7 @@
 				<Usuario>Usuario8@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>00:45:04</Duración>
+				<Duración>00:45:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario8</Mensaje>
 			</Summary>
@@ -410,7 +410,7 @@
 				<Usuario>Usuario9@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:45:04</Duración>
+				<Duración>01:45:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario9</Mensaje>
 			</Summary>
@@ -430,7 +430,7 @@
 				<Usuario>Adrian@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:25:21</Duración>
+				<Duración>02:25:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Adrian</Mensaje>
 			</Summary>
@@ -470,7 +470,7 @@
 				<Usuario>Usuario2@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:20:10</Duración>
+				<Duración>01:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario2</Mensaje>
 			</Summary>
@@ -490,7 +490,7 @@
 				<Usuario>Usuario3@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:00:10</Duración>
+				<Duración>01:00:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario3</Mensaje>
 			</Summary>
@@ -510,7 +510,7 @@
 				<Usuario>Usuario4@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:20:40</Duración>
+				<Duración>02:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario4</Mensaje>
 			</Summary>
@@ -530,7 +530,7 @@
 				<Usuario>Usuario5@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:20:40</Duración>
+				<Duración>02:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario5</Mensaje>
 			</Summary>
@@ -550,7 +550,7 @@
 				<Usuario>Usuario6@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:05:07</Duración>
+				<Duración>02:05:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario6</Mensaje>
 			</Summary>
@@ -570,7 +570,7 @@
 				<Usuario>Usuario7@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>03:00:04</Duración>
+				<Duración>03:00:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario7</Mensaje>
 			</Summary>
@@ -590,7 +590,7 @@
 				<Usuario>Usuario8@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>00:45:04</Duración>
+				<Duración>00:45:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario8</Mensaje>
 			</Summary>
@@ -610,7 +610,7 @@
 				<Usuario>Usuario9@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:45:04</Duración>
+				<Duración>01:45:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario9</Mensaje>
 			</Summary>
@@ -630,7 +630,7 @@
 				<Usuario>Adrian@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:25:21</Duración>
+				<Duración>02:25:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Adrian</Mensaje>
 			</Summary>
@@ -670,7 +670,7 @@
 				<Usuario>Usuario2@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:20:10</Duración>
+				<Duración>01:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario2</Mensaje>
 			</Summary>
@@ -690,7 +690,7 @@
 				<Usuario>Usuario3@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:00:10</Duración>
+				<Duración>01:00:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario3</Mensaje>
 			</Summary>
@@ -710,7 +710,7 @@
 				<Usuario>Usuario4@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:20:40</Duración>
+				<Duración>02:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario4</Mensaje>
 			</Summary>
@@ -730,7 +730,7 @@
 				<Usuario>Usuario5@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:20:40</Duración>
+				<Duración>02:20:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario5</Mensaje>
 			</Summary>
@@ -750,7 +750,7 @@
 				<Usuario>Usuario6@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:05:07</Duración>
+				<Duración>02:05:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario6</Mensaje>
 			</Summary>
@@ -770,7 +770,7 @@
 				<Usuario>Usuario7@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>03:00:04</Duración>
+				<Duración>03:00:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario7</Mensaje>
 			</Summary>
@@ -790,7 +790,7 @@
 				<Usuario>Usuario8@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>00:45:04</Duración>
+				<Duración>00:45:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario8</Mensaje>
 			</Summary>
@@ -810,7 +810,7 @@
 				<Usuario>Usuario9@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>01:45:04</Duración>
+				<Duración>01:45:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Usuario9</Mensaje>
 			</Summary>
@@ -830,7 +830,7 @@
 				<Usuario>Adrian@asti.dom</Usuario>
 				<Hostdeliniciador></Hostdeliniciador>
 				<IniciadorMAC></IniciadorMAC>
-				<Duración>02:25:21</Duración>
+				<Duración>02:25:00</Duración>
 				<Servicio>NetExtender</Servicio>
 				<Mensaje>User logged out - Adrian</Mensaje>
 			</Summary>

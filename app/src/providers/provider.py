@@ -72,12 +72,15 @@ class Provider(ABC):
         user_id : int
             user identifier
         """
-        Passage.objects.create(start_time=instant,
-                               end_time=end_time,
-                               app_id=app_id,
-                               event_id=event_id,
-                               item_id=item_id,
-                               person_id=user_id)
+        try:
+            Passage.objects.create(start_time=instant,
+                                   end_time=end_time,
+                                   app_id=app_id,
+                                   event_id=event_id,
+                                   item_id=item_id,
+                                   person_id=user_id)
+        except Exception as e:
+            print(f'{e}\nOne of the attributes is null!\nCheck if the user (login) is stored in the database')
 
     @staticmethod
     def _check_if_passage_exists(instant, user_id, app_id):

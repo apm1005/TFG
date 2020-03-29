@@ -91,11 +91,11 @@ class VPNProvider(Provider):
             units_instant = datetime.datetime.strptime(instant, '%Y-%m-%d %H:%M:%S')
             instant_time = datetime.timedelta(hours=units_instant.hour,
                                               minutes=units_instant.minute,
-                                              seconds=units_instant.second)
+                                              seconds=0)
             units_duration = datetime.datetime.strptime(duration, '%H:%M:%S')
             duration_time = datetime.timedelta(hours=units_duration.hour,
                                                minutes=units_duration.minute,
-                                               seconds=units_duration.second)
+                                               seconds=0)
             new_time = instant_time - duration_time
             units_new_time = datetime.datetime.strptime(str(new_time), '%H:%M:%S')
             start_time = datetime.datetime.strftime(
@@ -224,7 +224,7 @@ class VPNProvider(Provider):
         """
 
         units = datetime.datetime.strptime(timestamp, '%d-%b-%Y %H:%M:%S')
-        return datetime.datetime.strftime(units, '%Y-%m-%d %H:%M:%S')
+        return datetime.datetime.strftime(units, '%Y-%m-%d %H:%M:00')
 
     def store_data(self):
         """
