@@ -92,19 +92,25 @@ class VPNProvider(Provider):
             instant_time = datetime.timedelta(hours=units_instant.hour,
                                               minutes=units_instant.minute,
                                               seconds=0)
-            units_duration = datetime.datetime.strptime(duration, '%H:%M:%S')
+            try:
+                units_duration = datetime.datetime.strptime(duration, '%H:%M:%S')
+            except ValueError:
+                units_duration = datetime.time(0, 0, 0)
             duration_time = datetime.timedelta(hours=units_duration.hour,
                                                minutes=units_duration.minute,
                                                seconds=0)
             new_time = instant_time - duration_time
-            units_new_time = datetime.datetime.strptime(str(new_time), '%H:%M:%S')
-            start_time = datetime.datetime.strftime(
-                datetime.datetime(year=units_instant.year,
-                                  month=units_instant.month,
-                                  day=units_instant.day,
-                                  hour=units_new_time.hour,
-                                  minute=units_new_time.minute,
-                                  second=units_new_time.second), '%Y-%m-%d %H:%M:%S')
+            try:
+                units_new_time = datetime.datetime.strptime(str(new_time), '%H:%M:%S')
+                start_time = datetime.datetime.strftime(
+                    datetime.datetime(year=units_instant.year,
+                                      month=units_instant.month,
+                                      day=units_instant.day,
+                                      hour=units_new_time.hour,
+                                      minute=units_new_time.minute,
+                                      second=units_new_time.second), '%Y-%m-%d %H:%M:%S')
+            except ValueError:
+                print('Duration too long to manage!')
         return start_time
 
     @staticmethod
