@@ -1,0 +1,230 @@
+[
+{
+    "model": "logscope.itemtype",
+    "pk": 1,
+    "fields": {
+		"type": "Computer",
+		"brand": "ASUS",
+        "model": "X541UV"
+    }
+},
+{
+    "model": "logscope.itemtype",
+    "pk": 2,
+    "fields": {
+		"type": "Computer",
+		"brand": "HP",
+        "model": "ProBook 450 G5"
+    }
+},
+{
+    "model": "logscope.itemtype",
+    "pk": 3,
+    "fields": {
+		"type": "Computer",
+		"brand": "HP",
+        "model": "ProBook 430 G5"
+    }
+},
+{
+    "model": "logscope.itemtype",
+    "pk": 4,
+    "fields": {
+		"type": "Computer",
+		"brand": "HP",
+        "model": "ProBook 450 G6"
+    }
+},
+{
+    "model": "logscope.itemtype",
+    "pk": 5,
+    "fields": {
+		"type": "Computer",
+		"brand": "HP",
+        "model": "ProBook 430 G6"
+    }
+},
+{
+    "model": "logscope.eventtype",
+    "pk": "log in",
+    "fields": {
+        "description": "go through the procedures to begin use of an app"
+    }
+},
+{
+    "model": "logscope.eventtype",
+    "pk": "log out",
+    "fields": {
+        "description": "go through the procedures to conclude use of an app"
+    }
+},
+{
+    "model": "logscope.environment",
+    "pk": 1,
+    "fields": {
+		"name": "SA1",
+        "ip_address": "192.168.168.1"
+    }
+},
+{
+    "model": "logscope.environment",
+    "pk": 2,
+    "fields": {
+		"name": "SA2",
+        "ip_address": "192.168.168.2"
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 1,
+    "fields": {
+        "name": "VPN",
+        "description": "Virtual Private Network",
+        "server": 1
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 2,
+    "fields": {
+        "name": "Windows",
+        "description": "Windows OS",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 3,
+    "fields": {
+        "name": "Launcher",
+        "description": "ASTI App Launcher",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 4,
+    "fields": {
+        "name": "Partes",
+        "description": "App for hour report",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 5,
+    "fields": {
+        "name": "Dropbox",
+        "description": "Cloud storage service",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 6,
+    "fields": {
+        "name": "ERP SAGE",
+        "description": "Enterprise Resource Planning",
+        "server": 1
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 7,
+    "fields": {
+        "name": "Excelencia",
+        "description": "Dropbox Excelencia",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 8,
+    "fields": {
+        "name": "Hasta La Cocina",
+        "description": "App to order food",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 9,
+    "fields": {
+        "name": "Redimne",
+        "description": "App to report project incidents",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 10,
+    "fields": {
+        "name": "Regulación de Jornada",
+        "description": "App to regulate of hour reports",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 11,
+    "fields": {
+        "name": "Salesforce",
+        "description": "Cloud app for customer relationship management",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 12,
+    "fields": {
+        "name": "Seresco",
+        "description": "Human Resources app",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 13,
+    "fields": {
+        "name": "Firma",
+        "description": "Mail signature",
+        "server": 2
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 14,
+    "fields": {
+        "name": "Slack",
+        "description": "Messaging app",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 15,
+    "fields": {
+        "name": "Synergy",
+        "description": "App to manage employee data",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 16,
+    "fields": {
+        "name": "Webmail",
+        "description": "Web email system",
+        "server": null
+    }
+},
+{
+    "model": "logscope.app",
+    "pk": 17,
+    "fields": {
+        "name": "Reconociendo",
+        "description": "Reconociendo",
+        "server": 2
+    }
+}
+]
