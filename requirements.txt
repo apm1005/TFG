@@ -5,3 +5,4 @@ tablib==1.1.0
 django-bootstrap-form==3.4
 mysqlclient==1.4.5
 numpy==1.17.3
+pandas==0.25.2
