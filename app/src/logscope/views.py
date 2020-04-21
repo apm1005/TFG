@@ -18,3 +18,7 @@ class PassageTableView(ExportMixin, SingleTableMixin, FilterView):
     template_name = 'logscope/passage.html'
     table_class = PassageTable
     filterset_class = PassageFilter
+
+
+class StatisticView(TemplateView):
+    template_name = 'logscope/statistic.html'
