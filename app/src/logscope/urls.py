@@ -3,10 +3,12 @@ from .views import (
     HomeView,
     PassageTableView,
     StatisticView,
+    AnalyticsView,
 )
 
 urlpatterns = [
     path('', HomeView.as_view(), name='logscope-home'),
     path('passage/', PassageTableView.as_view(), name='passage'),
     path('statistic/', StatisticView.as_view(), name='statistic'),
+    path('analytics/', AnalyticsView.as_view(), name='analytics'),
 ]
