@@ -19,27 +19,33 @@
                     <div class="col-md-4 mb-3">
                         {{ filter.form.app|bootstrap }}
                     </div>
+                </div>
+                <div class="form-row">
                     <div class="col-md-4 mb-3">
-                        {{ filter.form.item|bootstrap }}
+                        {{ filter.form.company|bootstrap }}
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        {{ filter.form.area|bootstrap }}
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        {{ filter.form.department|bootstrap }}
                     </div>
                 </div>
-                <!--<div class="form-row">
-                    <div class="col-md-4 mb-3">
-                        {{ filter.form.start_time__date__gt|bootstrap }}
+                <div class="card">
+                    <div class="form-row ml-2 mt-2 mr-2">
+                        <div class="col-md-6">
+                            {{ filter.form.start_time_gt|bootstrap }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ filter.form.start_time_lt|bootstrap }}
+                        </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        {{ filter.form.start_time__date__lt|bootstrap }}
+                    <div class="ml-3 mb-1"
+                         style="font-family:arial;font-size:12px;font-style:italic;font-variant:small-caps">
+                        Date formats allowed: DD-MM-YYYY, DD/MM/YYYY
                     </div>
-                </div>-->
-                <!--<div class="form-row">
-                    <div class="col-md-4 mb-3">
-                        {{ filter.form.start_time__hour__gt|bootstrap }}
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        {{ filter.form.start_time__hour__lt|bootstrap }}
-                    </div>
-                </div>-->
-                <button class="btn btn-info" type="submit">Search</button>
+                </div>
+                <button class="btn btn-info mt-2" type="submit">Search</button>
             </div>
         </div>
     </form>
