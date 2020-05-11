@@ -1,6 +1,7 @@
 from django.views.generic import (
     TemplateView,
 )
+from django.contrib.auth.decorators import login_required
 from .models import Passage
 from .tables import PassageTable
 from .filters import PassageFilter

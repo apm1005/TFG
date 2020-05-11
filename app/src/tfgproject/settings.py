@@ -35,6 +35,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # own
     'logscope.apps.LogscopeConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
     'django_filters',
     'django_tables2',
     'bootstrapform',
@@ -142,3 +144,12 @@ LOGON_CUT_STRING = 22
 
 # Datetime format
 SHORT_DATETIME_FORMAT = 'd-m-Y H:i:s'
+
+# Crispy forms version
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Login redirection
+LOGIN_REDIRECT_URL = 'passage'
+
+# Login url
+LOGIN_URL = 'login'

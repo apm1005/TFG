@@ -1,0 +1,21 @@
+{% extends "logscope/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="card border-dark mb-3">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group ml-3">
+            <legend class="border-nottom mb-4">Join</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group ml-3">
+            <button class="btn btn-outline-info" type="sumbit">Sign up</button>
+        </div>
+    </form>
+    <div class="border-top pt-3 ml-3 mb-3">
+        <small class="text-muted">
+            Already have an account? <a class="ml-2" href="{% url 'login' %}">Sign in</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}

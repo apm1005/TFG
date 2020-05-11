@@ -35,24 +35,37 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
+                    <!-- Navbar Left Side -->
                     <div class="navbar-nav">
-                      <a class="nav-item nav-link" href="{% url 'passage' %}">Passages</a>
+                        <a class="nav-item nav-link" href="{% url 'passage' %}">Passages</a>
                     </div>
                     <div class="navbar-nav">
-                      <a class="nav-item nav-link" href="{% url 'statistic' %}">Statistics</a>
+                        <a class="nav-item nav-link" href="{% url 'statistic' %}">Analytics</a>
                     </div>
                     <div class="navbar-nav">
-                      <a class="nav-item nav-link" href="{% url 'analytics' %}">Microsoft Analytics</a>
+                        <a class="nav-item nav-link" href="{% url 'analytics' %}">Microsoft Analytics</a>
                     </div>
                     <!-- Navbar Right Side -->
-                    <!--<div class="navbar-nav ml-auto">
-                      <a class="nav-item nav-link" href="#">Parsers? (TO DO)</a>
-                    </div>-->
+                    <div class="navbar-nav ml-auto">
+                        {% if user.is_authenticated %}
+                            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                        {% else %}
+                            <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                            <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <main class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
         {% block content %}{% endblock %}
     </main>
 </body>
