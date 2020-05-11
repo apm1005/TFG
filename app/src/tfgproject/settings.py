@@ -35,7 +35,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # own
     'logscope.apps.LogscopeConfig',
-    'users.apps.UsersConfig',
     'crispy_forms',
     'django_filters',
     'django_tables2',
