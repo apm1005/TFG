@@ -8,7 +8,7 @@ Notice that all SQL scripts are <span style="color:#CB2400">only</span> warranti
 * MySQL 5.7.28
 * MySQL Workbench (Optional)
 * Python 3.7.5
-* Django 2.2.6
+* Django 3.0.5
 
 ## INSTALLING
 ### MySQL
@@ -40,6 +40,11 @@ Once we have Python installed, pip will be installed too.
 We can use pip to install virtualenv, a tool used to create virtual environments:
 ```cmd
 pip install virtualenv==16.7.7
+```
+
+Create the virtual environment with:
+```cmd
+virtualenv path
 ```
 
 It can be activated with:
@@ -82,6 +87,13 @@ This json files are located in ~\app\src\logscope\fixtures.
 
 ## DEPLOYMENT
 To deploy our project we can follow the next steps explained in [djangoproject](https://docs.djangoproject.com/en/2.2/howto/deployment/).
+
+### Admin account
+When you create everything from scratch is important to have an admin account. You can create one with:
+```cmd
+cd ~\app\src
+manage.py createsuperuser
+```
 
 ## TOOLS
 
