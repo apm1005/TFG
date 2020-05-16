@@ -27,22 +27,15 @@ class PassageTableView(ExportMixin, SingleTableMixin, FilterView):
 
 
 @method_decorator(login_required, name='dispatch')
-class StatisticView(TemplateView):
-    template_name = 'logscope/statistic.html'
-
-
-@method_decorator(login_required, name='dispatch')
 class AnalyticsView(TemplateView):
     template_name = 'logscope/analytics.html'
 
 
-def register(request):
-    if request.method == 'POST':
-        form = UserRegisterFrom(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, f'Your account has been created! Log in!')
-            return redirect('login')
-    else:
-        form = UserRegisterFrom()
-    return render(request, 'logscope/register.html', {'form': form})
+@method_decorator(login_required, name='dispatch')
+class MicrosoftAnalyticsView(TemplateView):
+    template_name = 'logscope/microsoft_analytics.html'
+
+
+@method_decorator(login_required, name='dispatch')
+class LocationAnalyticsView(TemplateView):
+    template_name = 'logscope/usage_by_location.html'

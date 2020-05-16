@@ -39,19 +39,26 @@
                     <div class="navbar-nav">
                         <a class="nav-item nav-link" href="{% url 'passage' %}">Passages</a>
                     </div>
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="{% url 'statistic' %}">Analytics</a>
-                    </div>
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="{% url 'analytics' %}">Microsoft Analytics</a>
-                    </div>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Analytics
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'analytics' %}">Launcher & VPN</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'microsoft_analytics' %}">Microsoft</a>
+                                <a class="dropdown-item" href="{% url 'usage_by_location' %}">Usage by location</a>
+                            </div>
+                        </li>
+                    </ul>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav ml-auto">
+                        <a class="nav-item nav-link" href="#">Wiki</a>
                         {% if user.is_authenticated %}
                             <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                         {% else %}
                             <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                            <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
                         {% endif %}
                     </div>
                 </div>
