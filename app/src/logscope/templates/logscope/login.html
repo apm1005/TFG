@@ -4,7 +4,7 @@
 <div class="card border-dark mb-3">
     <form method="POST">
         {% csrf_token %}
-        <fieldset class="form-group ml-3">
+        <fieldset class="form-group ml-3 mr-3">
             <legend class="border-nottom mb-4">Log in</legend>
             {{ form|crispy }}
         </fieldset>
@@ -12,10 +12,5 @@
             <button class="btn btn-outline-info" type="sumbit">Login</button>
         </div>
     </form>
-    <div class="border-top pt-3 ml-3 mb-3">
-        <small class="text-muted">
-            Need an account? <a class="ml-2" href="{% url 'register' %}">Sign up</a>
-        </small>
-    </div>
 </div>
 {% endblock content %}
