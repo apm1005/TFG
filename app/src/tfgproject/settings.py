@@ -60,10 +60,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'tfgproject.urls'
 
+print(BASE_DIR)
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'logscope/templates/logscope')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -149,7 +151,7 @@ SHORT_DATETIME_FORMAT = 'd-m-Y H:i:s'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Login redirection
-LOGIN_REDIRECT_URL = 'passage'
+LOGIN_REDIRECT_URL = 'analytics'
 
 # Login url
 LOGIN_URL = 'login'
