@@ -38,3 +38,7 @@ class MicrosoftAnalyticsView(TemplateView):
 @method_decorator(login_required, name='dispatch')
 class LocationAnalyticsView(TemplateView):
     template_name = 'logscope/usage_by_location.html'
+
+
+class WikiView(TemplateView):
+    template_name = 'logscope/wiki.html'
