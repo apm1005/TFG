@@ -60,7 +60,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'tfgproject.urls'
 
-print(BASE_DIR)
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'logscope/templates/logscope')
 TEMPLATES = [
     {
