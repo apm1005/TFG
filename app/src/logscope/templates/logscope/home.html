@@ -1,4 +1,5 @@
 {% load static %}
+{% load auth_extras %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,17 +18,21 @@
     <main class="container">
         <h1 class="display-1 text-center text-white mb-5">LogScope</h1>
 		<div class="card border-dark bg-dark">
-            <div class="row">
-                <div class="col-sm-4 text-center">
-                    <div class="card border-info">
-                        <div class="card-body">
-                            <h5 class="card-title">Passages</h5>
-                            <p class="card-text">An easier way to look for data and export it.</p>
-                            <a href="{% url 'passage' %}" class="btn btn-outline-dark btn-block">Go</a>
+            {% if request.user|has_group:"Admins" %}
+                <div class="row mb-3">
+                    <div class="col-sm-12 text-center">
+                        <div class="card border-info">
+                            <div class="card-body">
+                                <h5 class="card-title">Passages</h5>
+                                <p class="card-text">An easier way to look for data and export it.</p>
+                                <a href="{% url 'passage' %}" class="btn btn-outline-dark btn-block">Go</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 text-center">
+            {% endif %}
+            <div class="row">
+                <div class="col-sm-6 text-center">
                     <div class="card border-info">
                         <div class="card-body">
                             <h5 class="card-title">Launcher & VPN Analytics</h5>
@@ -36,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-6 text-center">
                     <div class="card border-info">
                         <div class="card-body">
                             <h5 class="card-title">Microsoft Analytics</h5>
