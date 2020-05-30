@@ -99,7 +99,7 @@ manage.py migrate
 
 ### Usuario admin
 
-> Cuando creas todo desde cero es imporante disponer de una usuario/cuenta de administrador. Puedes crear una con:
+> Cuando creas todo desde cero es importante disponer de una usuario/cuenta de administrador. Puedes crear una con:
 ```cmd
 manage.py createsuperuser
 ```
