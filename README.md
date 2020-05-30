@@ -44,7 +44,7 @@ Este proyecto ha sido desarrollado en colaboración con [ASTI Mobile Robotics](h
 * pandas - *version 0.25.2*
 
 
-> Tanto si usas virtualenv (shown in the section below) como si no, todos los requerimientos necesarios están en el fichero requirements.txt y podemos instalarlos fácilmente con:
+> Tanto si usas virtualenv (explicado en la siguiente sección) como si no, todos los requerimientos necesarios están en el fichero requirements.txt y podemos instalarlos fácilmente con:
 ```cmd
 pip install -r ~\requirements.txt
 ```
