@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-16 20:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\logscope\filters.py:8 .\logscope\models.py:7 .\logscope\tables.py:8
+msgid "Person"
+msgstr "Persona"
+
+#: .\logscope\filters.py:9 .\logscope\tables.py:9
+msgid "Company"
+msgstr "Compañía"
+
+#: .\logscope\filters.py:10 .\logscope\tables.py:10
+msgid "Area"
+msgstr "Área"
+
+#: .\logscope\filters.py:11 .\logscope\tables.py:11
+msgid "Department"
+msgstr "Departamento"
+
+#: .\logscope\filters.py:12
+msgid "Start time (date greater than)"
+msgstr "Hora de inicio (mayor que)"
+
+#: .\logscope\filters.py:15
+msgid "Start time (date lower than)"
+msgstr "Hora de inicio (menor que)"
+
+#: .\logscope\models.py:36 .\logscope\tables.py:14
+msgid "Item"
+msgstr "Dispositivo"
+
+#: .\logscope\models.py:78 .\logscope\tables.py:12
+msgid "App"
+msgstr "App"
+
+#: .\logscope\tables.py:13
+msgid "Start time"
+msgstr "Hora de inicio"
+
+#: .\logscope\tables.py:15
+msgid "Duration"
+msgstr "Duración"
+
+#: .\logscope\templates\logscope\403.html:4
+msgid "403 ERROR"
+msgstr "ERROR 403"
+
+#: .\logscope\templates\logscope\403.html:6
+msgid "You don't have permission to access this page."
+msgstr "No tienes permiso para acceder a esta página."
+
+#: .\logscope\templates\logscope\403.html:7
+msgid "Go to Analytics page."
+msgstr "Ir a la página de Análisis."
+
+#: .\logscope\templates\logscope\base.html:49
+msgid "Analytics"
+msgstr "Análisis"
+
+#: .\logscope\templates\logscope\base.html:52
+msgid "Launcher & VPN"
+msgstr "Lanzador de aplicaciones y VPN"
+
+#: .\logscope\templates\logscope\base.html:54
+msgid "Microsoft"
+msgstr "Microsoft"
+
+#: .\logscope\templates\logscope\base.html:55
+msgid "Usage by location"
+msgstr "Uso por ciudad"
+
+#: .\logscope\templates\logscope\base.html:62
+msgid "Administration"
+msgstr "Administración"
+
+#: .\logscope\templates\logscope\base.html:66
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: .\logscope\templates\logscope\base.html:68
+#: .\logscope\templates\logscope\login.html:13
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: .\logscope\templates\logscope\base.html:82
+msgid "Change"
+msgstr "Modificar"
+
+#: .\logscope\templates\logscope\home.html:28
+msgid "An easier way to look for data and export it."
+msgstr "Una forma sencilla de consultar datos y exportarlos."
+
+#: .\logscope\templates\logscope\home.html:29
+#: .\logscope\templates\logscope\home.html:41
+#: .\logscope\templates\logscope\home.html:50
+msgid "Go"
+msgstr "Ir"
+
+#: .\logscope\templates\logscope\home.html:39
+msgid "Launcher & VPN Analytics"
+msgstr "Análisis del lanzador de aplicaciones y VPN"
+
+#: .\logscope\templates\logscope\home.html:40
+msgid "Power BI reports to understand how apps are being used."
+msgstr "Informes Power BI para entender el uso de aplicaciones."
+
+#: .\logscope\templates\logscope\home.html:48
+msgid "Microsoft Analytics"
+msgstr "Microsoft Analytics"
+
+#: .\logscope\templates\logscope\home.html:49
+msgid "App provided by Microsoft that uses Power BI reports."
+msgstr "Aplicación proporcionada por Microsoft que utiliza informes Power BI."
+
+#: .\logscope\templates\logscope\login.html:9
+msgid "Log in"
+msgstr "Iniciar sesión"
+
+#: .\logscope\templates\logscope\login.html:17
+msgid "Need an account?"
+msgstr "¿Necesitas una cuenta?"
+
+#: .\logscope\templates\logscope\login.html:18
+msgid "Contact the IT department."
+msgstr "Contacta con el departamento de IT."
+
+#: .\logscope\templates\logscope\logout.html:5
+msgid "You have been logged out"
+msgstr "Has cerrado sesión"
+
+#: .\logscope\templates\logscope\logout.html:8
+msgid "Log in again"
+msgstr "Volver a iniciar sesión"
+
+#: .\logscope\templates\logscope\passage.html:12
+msgid "Search From"
+msgstr "Formulario de búsqueda"
+
+#: .\logscope\templates\logscope\passage.html:44
+msgid "Date formats allowed: DD-MM-YYYY, DD/MM/YYYY"
+msgstr "Formatos de fecha permitidos: DD-MM-AAAA, DD/MM/AAAA"
+
+#: .\logscope\templates\logscope\passage.html:47
+msgid "Search"
+msgstr "Buscar"
+
+#: .\logscope\templates\logscope\passage.html:54
+msgid "Export formats"
+msgstr "Formatos de exportación"
