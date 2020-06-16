@@ -2,15 +2,14 @@
 {% load render_table from django_tables2 %}
 {% load export_url from django_tables2 %}
 {% load bootstrap %}
+{% load i18n %}
 
 {% block content %}
 
 <div class="container">
     <form method="GET">
         <div class="card border-info">
-            <h6 class="card-header bg-info text-white">
-                Search From
-            </h6>
+            <h6 class="card-header bg-info text-white">{% trans "Search From" %}</h6>
             <div class="card-body">
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
@@ -42,17 +41,17 @@
                     </div>
                     <div class="ml-3 mb-1"
                          style="font-family:arial;font-size:12px;font-style:italic;font-variant:small-caps">
-                        Date formats allowed: DD-MM-YYYY, DD/MM/YYYY
+                        {% trans "Date formats allowed: DD-MM-YYYY, DD/MM/YYYY" %}
                     </div>
                 </div>
-                <button class="btn btn-info mt-2" type="submit">Search</button>
+                <button class="btn btn-info mt-2" type="submit">{% trans "Search" %}</button>
             </div>
         </div>
     </form>
 
     <div class="dropdown">
         <button class="btn btn-success btn-sm dropdown-toggle mt-4 mb-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Export formats
+            {% trans "Export formats" %}
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a href="{% export_url 'csv' %}" class="dropdown-item">.CSV</a>

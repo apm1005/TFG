@@ -1,9 +1,10 @@
 from django.db import models
+from django.utils.translation import gettext as _
 
 
 class Person(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=50, blank=True, null=False, verbose_name='Person')
+    name = models.CharField(max_length=50, blank=True, null=False, verbose_name=_('Person'))
     login = models.CharField(max_length=20, blank=True, null=False)
     company = models.CharField(max_length=50, blank=True, null=False)
     division = models.CharField(max_length=50, blank=True, null=True)
@@ -32,7 +33,7 @@ class Itemtype(models.Model):
 class Item(models.Model):
     id = models.AutoField(primary_key=True)
     item_type = models.ForeignKey(Itemtype, models.DO_NOTHING, db_column='item_type', blank=True, null=True,
-                                  verbose_name='Item')
+                                  verbose_name=_('Item'))
     ip_address = models.CharField(max_length=17, blank=True, null=True)
     mac_address = models.CharField(max_length=20, blank=True, null=True)
     persons = models.ManyToManyField(Person)
@@ -74,7 +75,7 @@ class Environment(models.Model):
 
 class App(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=50, blank=True, null=False, verbose_name='App')
+    name = models.CharField(max_length=50, blank=True, null=False, verbose_name=_('App'))
     description = models.CharField(max_length=100, blank=True, null=True)
     server = models.ForeignKey(Environment, models.DO_NOTHING, db_column='server', blank=True, null=True)
 

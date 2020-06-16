@@ -1,10 +1,11 @@
 {% extends "logscope/base.html" %}
+{% load i18n %}
 {% block content %}
 <div class="card border-dark mb-3">
-    <h2 class="ml-3 mt-3">You have been logged out</h2>
+    <h2 class="ml-3 mt-3">{% trans "You have been logged out" %}</h2>
     <div class="border-top pt-3 mb-3">
         <small class="text-muted ml-3">
-            <a class="ml-2" href="{% url 'login' %}">Log in again</a>
+            <a class="ml-2" href="{% url 'login' %}">{% trans "Log in again" %}</a>
         </small>
     </div>
 </div>
