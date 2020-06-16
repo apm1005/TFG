@@ -42,6 +42,7 @@ Este proyecto ha sido desarrollado en colaboración con [ASTI Mobile Robotics](h
 * mysqlclient - *version 1.4.5*
 * numpy - *version 1.17.3*
 * pandas - *version 0.25.2*
+* python-gettext - *version 4.0*
 
 
 > Tanto si usas virtualenv (shown in the section below) como si no, todos los requerimientos necesarios están en el fichero requirements.txt y podemos instalarlos fácilmente con:
@@ -219,6 +220,7 @@ This project has been developed in collaboration with [ASTI Mobile Robotics](htt
 * mysqlclient - *version 1.4.5*
 * numpy - *version 1.17.3*
 * pandas - *version 0.25.2*
+* python-gettext - *version 4.0*
 
 
 > Whether we use or not virtualenv (shown in the section below), all the requirements needed are located in requirements.txt and we can easily install them with:

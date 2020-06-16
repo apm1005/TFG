@@ -7,3 +7,4 @@ django-crispy-forms==1.9.0
 mysqlclient==1.4.5
 numpy==1.17.3
 pandas==0.25.2
+python-gettext==4.0
