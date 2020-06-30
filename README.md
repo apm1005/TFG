@@ -8,7 +8,7 @@ Este proyecto ha sido desarrollado en colaboración con [ASTI Mobile Robotics](h
 
 
 ## PRESENTACIÓN
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GqBC4lMWGxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Enlace al video de presentación de LogScope](https://www.youtube.com/watch?v=GqBC4lMWGxk)
 
 ## INSTALACIÓN
 
