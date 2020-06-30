@@ -6,6 +6,10 @@ En este repositorio encontrarás todo lo que necesitas para poner en marcha la a
 
 Este proyecto ha sido desarrollado en colaboración con [ASTI Mobile Robotics](https://www.astimobilerobotics.com/), empresa española dedicada a la ingeniería de robótica móvil.
 
+
+## PRESENTACIÓN
+[![Presentación LogScope](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=GqBC4lMWGxk)
+
 ## INSTALACIÓN
 
 ### Python 3.7.5
@@ -88,7 +92,7 @@ DB = {
     'PASSWORD': 'secret_password',
     'HOST': '127.0.0.1', # database IP
     'PORT': 3306, # database port
-    'SERVER': 10.10.10.10, # server IP
+    'SERVER': '10.10.10.10', # server IP
 }
 ```
 
@@ -162,11 +166,6 @@ manage.py runserver server_ip:port --insecure
 Usa ```0.0.0.0:8000``` por ejemplo.
 
 El parámetro ```--insecure``` es utilizado para habilitar los ficheros estáticos con el modo de depuración deshabilidato.
-
-
-## USO (TBD)
-
-Se añadirá un video para mostrar como funciona la aplicación.
 
 ## TOOLS
 
@@ -256,7 +255,7 @@ pip freeze
 > This app its being developed in Windows and that causes virtualenv to create different directories than in Linux.
 
 
-### Migrations (TO DO)
+### Migrations
 
 > First of all we need to create a file with the database configuration. The name of the file must be ```mysqlconfig.py``` and contain something like this:
 ```python
@@ -266,7 +265,7 @@ DB = {
     'PASSWORD': 'secret_password',
     'HOST': '127.0.0.1', # database IP
     'PORT': 3306, # database port
-    'SERVER': 10.10.10.10, # server IP
+    'SERVER': '10.10.10.10', # server IP
 }
 ```
 
@@ -343,10 +342,6 @@ Use ```0.0.0.0:8000``` for example.
 
 Parameter ```--insecure``` is used to enable static files with debug mode set on false.
 
-
-## USAGE (TBD)
-
-A video will be uploaded to show how the app works.
 
 ## TOOLS
 
